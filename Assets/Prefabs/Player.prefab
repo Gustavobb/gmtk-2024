@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  jumpForce: 8
+  jumpForce: 5
   groundDistance: 0.55
   groundMask:
     serializedVersion: 2
@@ -191,12 +191,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundDistance: 0.55
+  plusCount: 4
+  minusCount: 2
   groundMask:
     serializedVersion: 2
     m_Bits: 1
   groundedOn: {fileID: 0}
   rb: {fileID: 45192324926871222}
   scalePowerUpThrower: {fileID: 6361933617041319546}
+  bulletCounter: {fileID: 0}
 --- !u!114 &6361933617041319546
 MonoBehaviour:
   m_ObjectHideFlags: 0
