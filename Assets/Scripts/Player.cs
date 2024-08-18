@@ -6,22 +6,27 @@ public class Player : MonoBehaviour
 {
     [Header("Movement")]
     [SerializeField] private float speed = 5f;
+    [SerializeField] private float accelerationGrounded = 0.1f;
+    [SerializeField] private float accelerationAirborne = 0.2f;
     [SerializeField] private float jumpForce = 10f;
     [SerializeField] private float groundDistance = 0.2f;
     [SerializeField] private LayerMask groundMask;
 
     [Header("Jump Buffer")]
     [SerializeField] private float jumpBufferLength = 0.1f;
-	private float jumBufferCount;
+
 
     [Header("Coyote Time")]
     [SerializeField] private float coyoteTimeLength = 0.1f;
-    private float coyoteTimeCounter;
+
 
     [Header("References")]
     [SerializeField] private Rigidbody2D rb;
     private bool isGrounded;
     private float horizontalInput;
+    private float velocityXSmoothing;
+    private float jumBufferCount;
+    private float coyoteTimeCounter;
 
     private void Update()
     {
@@ -39,23 +44,31 @@ public class Player : MonoBehaviour
         {
             coyoteTimeCounter -= Time.deltaTime;
         }
-        
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             jumBufferCount = jumpBufferLength;
+            
             //rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
 
-        if (jumBufferCount >= 0 && coyoteTimeCounter > 0)
-		{
-			rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-			jumBufferCount = 0;
-		}
+        if (jumBufferCount >= 0 && coyoteTimeCounter > 0 && rb.velocity.y <= 0)
+        {
+            print("Jump");
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            jumBufferCount = 0;
+        }
     }
-    
+
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
+        float targetVelocityX = horizontalInput * speed;
+
+        float smoothSpeed = Mathf.SmoothDamp(rb.velocity.x, targetVelocityX, ref velocityXSmoothing, isGrounded ? accelerationGrounded : accelerationAirborne);
+
+        rb.velocity = new Vector2(smoothSpeed, rb.velocity.y);
+
+        //rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
     }
 }
