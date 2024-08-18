@@ -2358,6 +2358,14 @@ PrefabInstance:
       propertyPath: scalePowerUpManager
       value: 
       objectReference: {fileID: 1957399982}
+    - target: {fileID: 7034082234272242311, guid: 0b6fa75c9520f4acbaf3c5d774cb42ef, type: 3}
+      propertyPath: jumpForce
+      value: 4.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7034082234272242311, guid: 0b6fa75c9520f4acbaf3c5d774cb42ef, type: 3}
+      propertyPath: coyoteTimeLength
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

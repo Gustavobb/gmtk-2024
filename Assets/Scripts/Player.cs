@@ -11,8 +11,12 @@ public class Player : MonoBehaviour
     [SerializeField] private LayerMask groundMask;
 
     [Header("Jump Buffer")]
-    public float jumpBufferLength = 0.1f;
+    [SerializeField] private float jumpBufferLength = 0.1f;
 	private float jumBufferCount;
+
+    [Header("Coyote Time")]
+    [SerializeField] private float coyoteTimeLength = 0.1f;
+    private float coyoteTimeCounter;
 
     [Header("References")]
     [SerializeField] private Rigidbody2D rb;
@@ -26,14 +30,23 @@ public class Player : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, groundDistance, groundMask);
 
         isGrounded = hit.collider != null;
+
+        if (isGrounded)
+        {
+            coyoteTimeCounter = coyoteTimeLength;
+        }
+        else
+        {
+            coyoteTimeCounter -= Time.deltaTime;
+        }
         
         if (Input.GetKeyDown(KeyCode.Space))
         {
             jumBufferCount = jumpBufferLength;
             //rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
-        
-        if (jumBufferCount >= 0 && isGrounded)
+
+        if (jumBufferCount >= 0 && coyoteTimeCounter > 0)
 		{
 			rb.velocity = new Vector2(rb.velocity.x, jumpForce);
 			jumBufferCount = 0;
