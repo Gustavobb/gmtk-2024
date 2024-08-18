@@ -6,6 +6,8 @@ public class PlayerInteraction : MonoBehaviour
 {
 [Header("Movement")]
     [SerializeField] private float groundDistance = 0.2f;
+    [SerializeField] private int plusCount = 2;
+    [SerializeField] private int minusCount = 2;
     [SerializeField] private LayerMask groundMask;
     public GameObject groundedOn;
     public static PlayerInteraction Instance;
@@ -13,6 +15,7 @@ public class PlayerInteraction : MonoBehaviour
     [Header("References")]
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private ScalePowerUpThrower scalePowerUpThrower;
+    [SerializeField] private BulletCounter bulletCounter;
     private bool isGrounded;
 
     private void Awake()
@@ -29,13 +32,29 @@ public class PlayerInteraction : MonoBehaviour
         
         if (Input.GetMouseButtonUp(0))
         {
-            scalePowerUpThrower.ThrowPowerUp(ScalePowerUp.PowerUpType.ScaleUp);
+            if (plusCount > 0){
+                scalePowerUpThrower.ThrowPowerUp(ScalePowerUp.PowerUpType.ScaleUp);
+                plusCount --;
+                bulletCounter.AdjustPlusWidth(plusCount);
+            }
+            else{
+                // Implementar feedback visual/sonoro
+                scalePowerUpThrower.ResetTrajectory();
+            }
             return;
         }
         
         if (Input.GetMouseButtonUp(1))
         {
-            scalePowerUpThrower.ThrowPowerUp(ScalePowerUp.PowerUpType.ScaleDown);
+            if(minusCount > 0){
+                scalePowerUpThrower.ThrowPowerUp(ScalePowerUp.PowerUpType.ScaleDown);
+                minusCount --;
+                bulletCounter.AdjustMinusWidth(minusCount);
+            }
+            else{
+                // Implementar feedback visual/sonoro
+                scalePowerUpThrower.ResetTrajectory();
+            }
             return;
         }
 
