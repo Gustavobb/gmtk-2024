@@ -10,6 +10,10 @@ public class Player : MonoBehaviour
     [SerializeField] private float groundDistance = 0.2f;
     [SerializeField] private LayerMask groundMask;
 
+    [Header("Jump Buffer")]
+    public float jumpBufferLength = 0.1f;
+	private float jumBufferCount;
+
     [Header("References")]
     [SerializeField] private Rigidbody2D rb;
     private bool isGrounded;
@@ -17,16 +21,25 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        jumBufferCount -= Time.deltaTime;
         horizontalInput = Input.GetAxis("Horizontal");
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, groundDistance, groundMask);
 
         isGrounded = hit.collider != null;
         
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            jumBufferCount = jumpBufferLength;
+            //rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
+        
+        if (jumBufferCount >= 0 && isGrounded)
+		{
+			rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+			jumBufferCount = 0;
+		}
     }
+    
 
     private void FixedUpdate()
     {

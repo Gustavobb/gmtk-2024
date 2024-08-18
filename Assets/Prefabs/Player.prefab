@@ -177,6 +177,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 1
+  jumpBufferLength: 0.2
   rb: {fileID: 45192324926871222}
 --- !u!114 &7117421126932690913
 MonoBehaviour:
