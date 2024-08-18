@@ -6,12 +6,13 @@ public class BulletCounter : MonoBehaviour
 {
     [SerializeField] private float _liveImageWidth = 20;
     [SerializeField] private RectTransform plusRect, minusRect;
-    private int plusCount = 0, minusCount = 0;
+    [SerializeField] private int plusCount, minusCount;
         
     private void Start()
     {
-        plusRect.sizeDelta = new Vector2(0, plusRect.sizeDelta.y);
-        minusRect.sizeDelta = new Vector2(0, minusRect.sizeDelta.y);
+        // plusRect.sizeDelta = new Vector2(0, plusRect.sizeDelta.y);
+        // minusRect.sizeDelta = new Vector2(0, minusRect.sizeDelta.y);
+        BuildUI();
     }
 
     private void BuildUI()
