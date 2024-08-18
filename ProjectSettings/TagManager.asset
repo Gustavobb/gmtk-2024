@@ -8,6 +8,8 @@ TagManager:
   - PowerUpBouncer
   - Jumper
   - Connector
+  - Button
+  - PowerUp
   layers:
   - Default
   - TransparentFX

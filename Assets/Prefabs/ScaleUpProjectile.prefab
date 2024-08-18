@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6429273798011304195}
   m_Layer: 6
   m_Name: ScaleUpProjectile
-  m_TagString: Untagged
+  m_TagString: PowerUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

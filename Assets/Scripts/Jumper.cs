@@ -15,7 +15,7 @@ public class Jumper : MonoBehaviour
 
     private void CheckIfCanPropelPlayer()
     {
-        if (Player.Instance.groundedOn != gameObject) return;
-        Player.Instance.Propel(Vector2.up, propelForce);
+        if (PlayerInteraction.Instance.groundedOn != gameObject) return;
+        PlayerInteraction.Instance.Propel(Vector2.up, propelForce);
     }
 }
