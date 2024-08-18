@@ -6,6 +6,7 @@ public class PlayerInteraction : MonoBehaviour
 {
 [Header("Movement")]
     [SerializeField] private float groundDistance = 0.2f;
+
     [SerializeField] private LayerMask groundMask;
     public GameObject groundedOn;
     public static PlayerInteraction Instance;
