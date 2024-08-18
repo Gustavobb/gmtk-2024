@@ -24,6 +24,9 @@ public class ScalableObject : MonoBehaviour
     [Header("Easing")]
     [SerializeField] private float duration = 1f;
     [SerializeField] private Easing.EasingType easingType = Easing.EasingType.Linear;
+    [SerializeField] private List<ArrowVisual> arrowsOutside, arrowsInside;
+    [SerializeField] private float arrowsScale = 0.05f;
+
     private Func<float, float> ease;
     private Queue<Action> scaleFunctions = new Queue<Action>();
     public bool isScaling;
@@ -42,6 +45,20 @@ public class ScalableObject : MonoBehaviour
     }
 #endif
 
+    [EButton]
+    private void NormalizeArrowsSize()
+    {
+        foreach (ArrowVisual arrow in arrowsOutside)
+        {
+            arrow.NormalizeArrowScale();
+        }
+
+        foreach (ArrowVisual arrow in arrowsInside)
+        {
+            arrow.NormalizeArrowScale();
+        }
+    } 
+
     public void PerformUpdate()
     {
         if (!gameObject.activeInHierarchy) return;
@@ -57,6 +74,7 @@ public class ScalableObject : MonoBehaviour
     {
         ease = Easing.GetEasingFunction(easingType);
         GameObjectUpdateManager.PerformUpdate += PerformUpdate;
+        NormalizeArrowsSize();
     }
 
     public void ScaleDownQueue()
@@ -153,11 +171,71 @@ public class ScalableObject : MonoBehaviour
             transform.localPosition = Vector3.Lerp(initialPosition, endPosition, ease(time / duration));
 
             time += Time.deltaTime;
+            NormalizeArrowsSize();
             yield return null;
         }
 
         transform.localScale = endScale;
         transform.localPosition = endPosition;
         isScaling = false;
+        NormalizeArrowsSize();
+    }
+
+    public bool CanScaleOnXUp(bool isInside)
+    {
+        bool result = (scaleBehaviourX == ScaleBehaviour.AxisPlus || scaleBehaviourX == ScaleBehaviour.Uniform);
+
+        if (!isInside)
+        {
+            return result && transform.localScale.x < maxScale.x;
+        }
+
+        return result && transform.localScale.x > minScale.x;
+    }
+
+    private bool LessThan(float a, float b, float epsilon = 0.0001f)
+    {
+        return a - b < epsilon;
+    }
+
+    private bool GreaterThan(float a, float b, float epsilon = 0.0001f)
+    {
+        return a - b > epsilon;
+    }
+
+    public bool CanScaleOnXDown(bool isInside)
+    {
+        bool result = (scaleBehaviourX == ScaleBehaviour.AxisMinus || scaleBehaviourX == ScaleBehaviour.Uniform);
+
+        if (!isInside)
+        {
+            return result && GreaterThan(maxScale.x, transform.localScale.x);
+        }
+
+        return result && !LessThan(transform.localScale.x, minScale.x);
+    }
+
+    public bool CanScaleOnYUp(bool isInside)
+    {
+        bool result = (scaleBehaviourY == ScaleBehaviour.AxisPlus || scaleBehaviourY == ScaleBehaviour.Uniform);
+
+        if (!isInside)
+        {
+            return result && GreaterThan(maxScale.y, transform.localScale.y);
+        }
+
+        return result && !LessThan(transform.localScale.y, minScale.y);
+    }
+
+    public bool CanScaleOnYDown(bool isInside)
+    {
+        bool result = (scaleBehaviourY == ScaleBehaviour.AxisMinus || scaleBehaviourY == ScaleBehaviour.Uniform);
+
+        if (!isInside)
+        {
+            return result && GreaterThan(maxScale.y, transform.localScale.y);
+        }
+
+        return result && !LessThan(transform.localScale.y, minScale.y);
     }
 }
