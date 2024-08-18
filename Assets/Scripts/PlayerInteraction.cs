@@ -6,8 +6,6 @@ public class PlayerInteraction : MonoBehaviour
 {
 [Header("Movement")]
     [SerializeField] private float groundDistance = 0.2f;
-    [SerializeField] private int plusCount;
-    [SerializeField] private int minusCount;
     [SerializeField] private LayerMask groundMask;
     public GameObject groundedOn;
     public static PlayerInteraction Instance;
@@ -21,8 +19,6 @@ public class PlayerInteraction : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        bulletCounter.AdjustPlusWidth(plusCount);
-        bulletCounter.AdjustMinusWidth(minusCount);
     }
     
     private void Update()
@@ -34,33 +30,39 @@ public class PlayerInteraction : MonoBehaviour
         
         if (Input.GetMouseButtonUp(0))
         {
-            if (plusCount > 0){
+            scalePowerUpThrower.ResetTrajectory();
+            if (bulletCounter.HasPlusBullet())
+            {
                 scalePowerUpThrower.ThrowPowerUp(ScalePowerUp.PowerUpType.ScaleUp);
-                plusCount --;
-                bulletCounter.AdjustPlusWidth(plusCount);
+                bulletCounter.UsePlusBullet();
+                return;
             }
-            else{
-                // Implementar feedback visual/sonoro
-                scalePowerUpThrower.ResetTrajectory();
-            }
+
+            // Implementar feedback visual/sonoro
             return;
         }
         
         if (Input.GetMouseButtonUp(1))
         {
-            if(minusCount > 0){
+            scalePowerUpThrower.ResetTrajectory();
+            if (bulletCounter.HasMinusBullet())
+            {
                 scalePowerUpThrower.ThrowPowerUp(ScalePowerUp.PowerUpType.ScaleDown);
-                minusCount --;
-                bulletCounter.AdjustMinusWidth(minusCount);
+                bulletCounter.UseMinusBullet();
+                return;
             }
-            else{
-                // Implementar feedback visual/sonoro
-                scalePowerUpThrower.ResetTrajectory();
-            }
+
+            // Implementar feedback visual/sonoro
             return;
         }
 
-        if (Input.GetMouseButton(0) || Input.GetMouseButton(1))
+        if (Input.GetMouseButton(0) && bulletCounter.HasPlusBullet())
+        {
+            // plot()
+            scalePowerUpThrower.PlotTrajectory();
+        }
+
+        if (Input.GetMouseButton(1) && bulletCounter.HasMinusBullet())
         {
             // plot()
             scalePowerUpThrower.PlotTrajectory();

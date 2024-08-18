@@ -54,7 +54,6 @@ public class Player : MonoBehaviour
 
         if (jumBufferCount >= 0 && coyoteTimeCounter > 0 && rb.velocity.y <= 0)
         {
-            print("Jump");
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             jumBufferCount = 0;
         }
