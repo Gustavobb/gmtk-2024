@@ -19,6 +19,10 @@ public class LevelScaler : MonoBehaviour
     private bool performUpdate = false;
     private const string PLAYER_TAG = "Player";
 
+    void OnDestroy(){
+        GameObjectUpdateManager.PerformFixedUpdate -= PerformFixedUpdate;
+    }
+
     private void Start()
     {
         GameObjectUpdateManager.PerformFixedUpdate += PerformFixedUpdate;

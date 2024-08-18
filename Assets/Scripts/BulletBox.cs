@@ -7,6 +7,9 @@ public class BulletBox : MonoBehaviour
     [SerializeField] private BulletCounter bulletCounter;
     [SerializeField] private int plusGain, minusGain;
     private float xr, yr, zr;
+    void OnDestroy(){
+        GameObjectUpdateManager.PerformUpdate -= PerformUpdate;
+    }
 
     private void Start()
     {

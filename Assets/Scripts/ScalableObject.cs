@@ -42,8 +42,13 @@ public class ScalableObject : MonoBehaviour
     }
 #endif
 
+    void OnDestroy(){
+        GameObjectUpdateManager.PerformUpdate -= PerformUpdate;
+    }
+
     public void PerformUpdate()
     {
+        // tava dando erro no reset
         if (!gameObject.activeInHierarchy) return;
 
         if (scaleFunctions.Count > 0 && !isScaling)
