@@ -6,8 +6,8 @@ public class PlayerInteraction : MonoBehaviour
 {
 [Header("Movement")]
     [SerializeField] private float groundDistance = 0.2f;
-    [SerializeField] private int plusCount = 2;
-    [SerializeField] private int minusCount = 2;
+    [SerializeField] private int plusCount;
+    [SerializeField] private int minusCount;
     [SerializeField] private LayerMask groundMask;
     public GameObject groundedOn;
     public static PlayerInteraction Instance;
@@ -21,6 +21,8 @@ public class PlayerInteraction : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        bulletCounter.AdjustPlusWidth(plusCount);
+        bulletCounter.AdjustMinusWidth(minusCount);
     }
     
     private void Update()
