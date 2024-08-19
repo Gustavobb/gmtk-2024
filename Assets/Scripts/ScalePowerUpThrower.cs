@@ -25,8 +25,10 @@ public class ScalePowerUpThrower : MonoBehaviour
         if (powerUp == null) return;
 
         ResetTrajectory();
+        Vector2 mouseClamped = new Vector2(Mathf.Clamp(Input.mousePosition.x, 0, Screen.width), Mathf.Clamp(Input.mousePosition.y, 0, Screen.height));
+
         powerUp.transform.position = transform.position;
-        Vector2 direction = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position).normalized;
+        Vector2 direction = (Camera.main.ScreenToWorldPoint(mouseClamped) - transform.position).normalized;
         powerUp.rb.AddForce(direction * throwForce, ForceMode2D.Impulse);
         powerUp.rb.angularVelocity = 1000f;
         SoundManager.instance.Play("Shoot");
