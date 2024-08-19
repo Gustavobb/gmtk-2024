@@ -17,6 +17,7 @@ public class LevelManager : MonoBehaviour
     }
 
     private void ResetLevel(){
+        SoundManager.instance.Play("Reset");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

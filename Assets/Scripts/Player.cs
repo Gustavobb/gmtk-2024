@@ -58,6 +58,7 @@ public class Player : MonoBehaviour
         if (jumBufferCount >= 0 && coyoteTimeCounter > 0 && rb.velocity.y <= 0)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            SoundManager.instance.Play("Jump");
             jumBufferCount = 0;
         }
     }
