@@ -26,7 +26,7 @@ public class ScalableObject : MonoBehaviour
     [SerializeField] private Easing.EasingType easingType = Easing.EasingType.Linear;
     [SerializeField] private List<ArrowVisual> arrowsOutside, arrowsInside;
     [SerializeField] private float arrowsScale = 0.05f;
-
+    public Vector3 ScaleDirection;
     private Func<float, float> ease;
     private Queue<Action> scaleFunctions = new Queue<Action>();
     public bool isScaling;
@@ -97,7 +97,9 @@ public class ScalableObject : MonoBehaviour
         if ((transform.localScale + scale).y < minScale.y) scale.y = minScale.y - transform.localScale.y;
         CalculateScaleBehaviour(ref scale, ref translation);
 
+        ScaleDirection = new Vector3(Mathf.Abs(translation.x) > 0.01f ? Mathf.Sign(translation.x) : 0f, Mathf.Abs(translation.y) > 0.01f ? Mathf.Sign(translation.y) : 0f, 0f);
         onScaleDown?.Invoke();
+
         StartCoroutine(ScaleCoroutine(scale, translation));
     }
 
@@ -111,7 +113,9 @@ public class ScalableObject : MonoBehaviour
         if ((maxScale - transform.localScale).y < scale.y) scale.y = maxScale.y - transform.localScale.y;
         CalculateScaleBehaviour(ref scale, ref translation);
         
+        ScaleDirection = new Vector3(Mathf.Abs(translation.x) > 0.01f ? Mathf.Sign(translation.x) : 0f, Mathf.Abs(translation.y) > 0.01f ? Mathf.Sign(translation.y) : 0f, 0f);
         onScaleUp?.Invoke();
+
         StartCoroutine(ScaleCoroutine(scale, translation));
     }
 
