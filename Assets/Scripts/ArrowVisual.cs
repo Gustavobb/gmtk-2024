@@ -6,7 +6,7 @@ using UnityEngine;
 public class ArrowVisual : MonoBehaviour
 {
     public ScalableObject scalable;
-    [SerializeField] private float arrowScale = 0.05f;
+    [SerializeField] private float arrowScaleXYZ = 0.08f;
     [SerializeField] private bool isInside;
     public enum ArrowType
     {
@@ -37,6 +37,8 @@ public class ArrowVisual : MonoBehaviour
             default:
                 break;
         }
+
+        // arrowScale += 0.03f;
     }
 
     public void SetupArrow()
@@ -51,7 +53,7 @@ public class ArrowVisual : MonoBehaviour
 
         Vector2 localScaleAmount = transform.localRotation * scalable.transform.localScale;
 
-        Vector2 scale = new Vector2(arrowScale, arrowScale);
+        Vector2 scale = new Vector2(arrowScaleXYZ, arrowScaleXYZ);
         localScaleAmount = new Vector2(Mathf.Abs(localScaleAmount.x), Mathf.Abs(localScaleAmount.y));
         Vector3 newScale = new Vector3(scale.x / localScaleAmount.x, scale.y / localScaleAmount.y, 1f);
 

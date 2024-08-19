@@ -35,7 +35,7 @@ public class LevelManager : MonoBehaviour
     private IEnumerator LoadNextLevelCoroutine(){
         yield return new WaitForSeconds(.1f);
         cameraAnim.SetTrigger("ZoomOut");
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(.5f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

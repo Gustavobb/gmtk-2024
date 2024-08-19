@@ -100,6 +100,7 @@ MonoBehaviour:
   scalable: {fileID: 7390711189811585715}
   arrowScale: 0.05
   isInside: 0
+  spriteRenderer: {fileID: 3038486360842323177}
   arrowType: 0
 --- !u!1 &104665874116041467
 GameObject:
@@ -201,6 +202,7 @@ MonoBehaviour:
   scalable: {fileID: 4193579332429742920}
   arrowScale: 0.05
   isInside: 1
+  spriteRenderer: {fileID: 6019024638818568845}
   arrowType: 0
 --- !u!1 &387315563052993742
 GameObject:
@@ -302,6 +304,7 @@ MonoBehaviour:
   scalable: {fileID: 4193579332429742920}
   arrowScale: 0.05
   isInside: 1
+  spriteRenderer: {fileID: 7375738044070176213}
   arrowType: 1
 --- !u!1 &637324396937188921
 GameObject:
@@ -421,6 +424,7 @@ MonoBehaviour:
   - {fileID: 1384183857641340460}
   - {fileID: 6530012257473527836}
   arrowsScale: 0.05
+  ScaleDirection: {x: 0, y: 0, z: 0}
   isScaling: 0
   onScaleDown:
     m_PersistentCalls:
@@ -573,6 +577,7 @@ MonoBehaviour:
   scalable: {fileID: 7390711189811585715}
   arrowScale: 0.05
   isInside: 1
+  spriteRenderer: {fileID: 592473120123390157}
   arrowType: 2
 --- !u!1 &1519025157685228186
 GameObject:
@@ -674,6 +679,7 @@ MonoBehaviour:
   scalable: {fileID: 4193579332429742920}
   arrowScale: 0.05
   isInside: 0
+  spriteRenderer: {fileID: 5651268704060644548}
   arrowType: 3
 --- !u!1 &1679358917098217831
 GameObject:
@@ -775,6 +781,7 @@ MonoBehaviour:
   scalable: {fileID: 7390711189811585715}
   arrowScale: 0.05
   isInside: 1
+  spriteRenderer: {fileID: 834751502566405917}
   arrowType: 1
 --- !u!1 &1719292116796971984
 GameObject:
@@ -876,6 +883,7 @@ MonoBehaviour:
   scalable: {fileID: 4193579332429742920}
   arrowScale: 0.05
   isInside: 0
+  spriteRenderer: {fileID: 6471486168317806611}
   arrowType: 0
 --- !u!1 &1826935943665308150
 GameObject:
@@ -977,6 +985,7 @@ MonoBehaviour:
   scalable: {fileID: 7390711189811585715}
   arrowScale: 0.05
   isInside: 0
+  spriteRenderer: {fileID: 3783262693795832295}
   arrowType: 1
 --- !u!1 &1910419727145432107
 GameObject:
@@ -1113,6 +1122,7 @@ MonoBehaviour:
   scalable: {fileID: 4193579332429742920}
   arrowScale: 0.05
   isInside: 0
+  spriteRenderer: {fileID: 8096224388282260976}
   arrowType: 1
 --- !u!1 &2216336177436266882
 GameObject:
@@ -1214,6 +1224,7 @@ MonoBehaviour:
   scalable: {fileID: 4193579332429742920}
   arrowScale: 0.05
   isInside: 1
+  spriteRenderer: {fileID: 943884307334216294}
   arrowType: 3
 --- !u!1 &3627471690205162388
 GameObject:
@@ -1315,6 +1326,7 @@ MonoBehaviour:
   scalable: {fileID: 7390711189811585715}
   arrowScale: 0.05
   isInside: 0
+  spriteRenderer: {fileID: 7915230097101223858}
   arrowType: 2
 --- !u!1 &5612651714500491246
 GameObject:
@@ -1416,6 +1428,7 @@ MonoBehaviour:
   scalable: {fileID: 7390711189811585715}
   arrowScale: 0.05
   isInside: 1
+  spriteRenderer: {fileID: 5665317200503555904}
   arrowType: 0
 --- !u!1 &5745736835096700730
 GameObject:
@@ -1517,6 +1530,7 @@ MonoBehaviour:
   scalable: {fileID: 4193579332429742920}
   arrowScale: 0.05
   isInside: 0
+  spriteRenderer: {fileID: 7931481531001375650}
   arrowType: 2
 --- !u!1 &5934748767000304936
 GameObject:
@@ -1618,6 +1632,7 @@ MonoBehaviour:
   scalable: {fileID: 4193579332429742920}
   arrowScale: 0.05
   isInside: 1
+  spriteRenderer: {fileID: 9071335966098316726}
   arrowType: 2
 --- !u!1 &6496507548241163830
 GameObject:
@@ -1719,6 +1734,7 @@ MonoBehaviour:
   scalable: {fileID: 7390711189811585715}
   arrowScale: 0.05
   isInside: 1
+  spriteRenderer: {fileID: 3378418028782805472}
   arrowType: 3
 --- !u!1 &7397451832164477162
 GameObject:
@@ -1909,6 +1925,7 @@ MonoBehaviour:
   - {fileID: 9199786307200273047}
   - {fileID: 7335728997744888906}
   arrowsScale: 0.05
+  ScaleDirection: {x: 0, y: 0, z: 0}
   isScaling: 0
   onScaleDown:
     m_PersistentCalls:
@@ -2061,6 +2078,7 @@ MonoBehaviour:
   scalable: {fileID: 7390711189811585715}
   arrowScale: 0.05
   isInside: 0
+  spriteRenderer: {fileID: 8395646798892027857}
   arrowType: 3
 --- !u!1 &8845723742071173883
 GameObject:

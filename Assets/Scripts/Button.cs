@@ -12,10 +12,13 @@ public class Button : MonoBehaviour
 
     [SerializeField] private ButtonType buttonType;
     [SerializeField] private ScalableObject scalable;
+    [SerializeField] private Animation animator;
+    private bool stopWatchCanPress = true;
+    private float stopWatchTime = 1f;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("PowerUp")) return;
+        if (collision.gameObject.CompareTag("PowerUp") || !stopWatchCanPress) return;
         Press(scalable);
     }
 
@@ -30,5 +33,15 @@ public class Button : MonoBehaviour
                 scalable.ScaleDownQueue();
                 break;
         }
+
+        animator.Play();
+        StartCoroutine(StopWatch());
+    }
+
+    private IEnumerator StopWatch()
+    {
+        stopWatchCanPress = false;
+        yield return new WaitForSeconds(stopWatchTime);
+        stopWatchCanPress = true;
     }
 }

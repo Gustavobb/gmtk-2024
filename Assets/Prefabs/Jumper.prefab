@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0.5, y: 0, z: 0}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
+  m_LocalScale: {x: 0.08333334, y: 0.04999999, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5138034286293567316}
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scalable: {fileID: 4018423857894863223}
-  arrowScale: 0.05
+  arrowScale: 0.08
   isInside: 1
   arrowType: 3
 --- !u!1 &2695822435608647402
@@ -164,7 +164,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: -0.5, z: 0}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
+  m_LocalScale: {x: 0.05, y: 0.08333333, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5138034286293567316}
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scalable: {fileID: 4018423857894863223}
-  arrowScale: 0.05
+  arrowScale: 0.08
   isInside: 1
   arrowType: 1
 --- !u!1 &4600039783292804242
@@ -265,7 +265,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 0.049999997, y: 0.049999997, z: 0.049999997}
+  m_LocalScale: {x: 0.05, y: 0.08333333, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3150783593297674603}
@@ -335,7 +335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scalable: {fileID: 4018423857894863223}
-  arrowScale: 0.05
+  arrowScale: 0.08
   isInside: 0
   arrowType: 0
 --- !u!1 &4786378366603824239
@@ -366,7 +366,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0.5, y: 0, z: 0}
-  m_LocalScale: {x: 0.049999997, y: 0.049999997, z: 0.049999997}
+  m_LocalScale: {x: 0.083333306, y: 0.05, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3150783593297674603}
@@ -436,7 +436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scalable: {fileID: 4018423857894863223}
-  arrowScale: 0.05
+  arrowScale: 0.08
   isInside: 0
   arrowType: 3
 --- !u!1 &5382077956606777941
@@ -502,7 +502,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -0.5, y: 0, z: 0}
-  m_LocalScale: {x: 0.049999997, y: 0.049999997, z: 0.049999997}
+  m_LocalScale: {x: 0.08333334, y: 0.04999999, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3150783593297674603}
@@ -572,7 +572,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scalable: {fileID: 4018423857894863223}
-  arrowScale: 0.05
+  arrowScale: 0.08
   isInside: 0
   arrowType: 2
 --- !u!1 &7100562998929599493
@@ -603,7 +603,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
+  m_LocalScale: {x: 0.05, y: 0.08333333, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5138034286293567316}
@@ -673,7 +673,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scalable: {fileID: 4018423857894863223}
-  arrowScale: 0.05
+  arrowScale: 0.08
   isInside: 1
   arrowType: 0
 --- !u!1 &7228105323375106237
@@ -704,7 +704,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -0.5, y: 0, z: 0}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
+  m_LocalScale: {x: 0.083333306, y: 0.05, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5138034286293567316}
@@ -774,7 +774,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scalable: {fileID: 4018423857894863223}
-  arrowScale: 0.05
+  arrowScale: 0.08
   isInside: 1
   arrowType: 2
 --- !u!1 &7261267955819242191
@@ -805,7 +805,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.5, z: 0}
-  m_LocalScale: {x: 0.049999997, y: 0.049999997, z: 0.049999997}
+  m_LocalScale: {x: 0.05, y: 0.08333333, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3150783593297674603}
@@ -875,7 +875,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scalable: {fileID: 4018423857894863223}
-  arrowScale: 0.05
+  arrowScale: 0.08
   isInside: 0
   arrowType: 1
 --- !u!1 &7283484147039964172
@@ -959,6 +959,7 @@ MonoBehaviour:
   - {fileID: 2586264269665094385}
   - {fileID: 6786968990993066529}
   arrowsScale: 0.05
+  ScaleDirection: {x: 0, y: 0, z: 0}
   isScaling: 0
   onScaleDown:
     m_PersistentCalls:
@@ -1007,11 +1008,11 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -5177388603050735206, guid: 8884154dfe85442a3a3578be807dbcdf, type: 3}
   m_Color: {r: 0.45882356, g: 0.62187517, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
+  m_DrawMode: 1
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
@@ -1052,12 +1053,12 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 0.25, y: 0.25, z: 0.25, w: 0.25}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
-    drawMode: 0
+    drawMode: 1
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
