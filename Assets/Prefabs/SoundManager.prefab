@@ -201,25 +201,31 @@ MonoBehaviour:
   - name: AmmoBox
     clip: {fileID: 8300000, guid: 4e99469b3d2b1cb40a1da5ffc9f324b4, type: 3}
     volume: 0.3
-    pitch: 0
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Impact
     clip: {fileID: 8300000, guid: 7b975218273deb4468c2a9a58a623d91, type: 3}
     volume: 0.3
-    pitch: 0
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Jump
-    clip: {fileID: 8300000, guid: 577890debef82c44987a7b0508ed20ae, type: 3}
-    volume: 0.3
+    clip: {fileID: 8300000, guid: 556eccfa8cbefa244b8398f68587a2fb, type: 3}
+    volume: 0.15
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Shoot
+    clip: {fileID: 8300000, guid: 4f83e38204c072d42b25224f8b7cd337, type: 3}
+    volume: 0.2
     pitch: 1
     loop: 0
     source: {fileID: 0}
   musics:
-  - name: MainMusic
+  - name: Music
     clip: {fileID: 8300000, guid: 08fdc0eecf6422b4d80873ab8dd0daa4, type: 3}
-    volume: 0.293
-    pitch: 1
-    loop: 1
+    volume: 0
+    pitch: 0
+    loop: 0
     source: {fileID: 0}

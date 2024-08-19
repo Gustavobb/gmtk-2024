@@ -30,5 +30,6 @@ public class ScalePowerUpThrower : MonoBehaviour
         Vector2 direction = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position).normalized;
         powerUp.rb.AddForce(direction * throwForce, ForceMode2D.Impulse);
         powerUp.rb.angularVelocity = 1000f;
+        SoundManager.instance.Play("Shoot");
     }
 }
