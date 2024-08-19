@@ -26,7 +26,6 @@ public class ScalePowerUpThrower : MonoBehaviour
         if (powerUp == null) return;
 
         ResetTrajectory();
-
         powerUp.transform.position = transform.position;
         Vector2 direction = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position).normalized;
         powerUp.rb.AddForce(direction * throwForce, ForceMode2D.Impulse);

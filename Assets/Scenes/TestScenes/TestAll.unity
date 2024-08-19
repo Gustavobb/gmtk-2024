@@ -343,6 +343,7 @@ MonoBehaviour:
   jumpBufferLength: 0.1
   coyoteTimeLength: 0.1
   rb: {fileID: 78436323}
+  _animator: {fileID: 0}
 --- !u!114 &78436325
 MonoBehaviour:
   m_ObjectHideFlags: 0
