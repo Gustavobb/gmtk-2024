@@ -177,25 +177,25 @@ MonoBehaviour:
   - name: Grow
     clip: {fileID: 8300000, guid: a6c1c7e82c9a57347a2d4ef91fcb92d7, type: 3}
     volume: 0.3
-    pitch: 0
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Shrink
     clip: {fileID: 8300000, guid: 7303b2ee767620c4ba70d8eb369278aa, type: 3}
     volume: 0.3
-    pitch: 0
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Victory
     clip: {fileID: 8300000, guid: 5b25f30115734a246a602f5e5ecef1ab, type: 3}
     volume: 0.3
-    pitch: 0
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Reset
     clip: {fileID: 8300000, guid: 3f9967669ea5f374fb644aa7790cf8f8, type: 3}
     volume: 0.3
-    pitch: 0
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: AmmoBox
@@ -213,13 +213,13 @@ MonoBehaviour:
   - name: Jump
     clip: {fileID: 8300000, guid: 577890debef82c44987a7b0508ed20ae, type: 3}
     volume: 0.3
-    pitch: 0
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   musics:
   - name: MainMusic
     clip: {fileID: 8300000, guid: 08fdc0eecf6422b4d80873ab8dd0daa4, type: 3}
     volume: 0.293
-    pitch: 0
+    pitch: 1
     loop: 1
     source: {fileID: 0}
