@@ -6,7 +6,6 @@ public class LevelScaler : MonoBehaviour
 {
     [SerializeField] private LevelScaler parentScaler;
     [SerializeField] private LevelScaler rootScaler;
-    [SerializeField] private InsideBox insideBox;
     [SerializeField] private BoxCollider2D levelBounds;
     [SerializeField] private Player player;
     [SerializeField] private Camera mainCamera;
@@ -59,7 +58,7 @@ public class LevelScaler : MonoBehaviour
 
         float t = effectTimeCounter / effectTime;
         t = Mathf.Clamp01(t);
-        t = effectDirection > 0f ? Easing.EaseLinear(t) : Easing.EaseLinear(t);
+        t = effectDirection > 0f ? Easing.EaseOutQuintic(t) : Easing.EaseOutQuintic(t);
         rootScaler.transform.localScale = Vector3.Lerp(initialScale, finalScale, t);
         mainCamera.transform.position = Vector3.Lerp(initialCameraPosition, transform.position, t);
         mainCamera.transform.position = new Vector3(mainCamera.transform.position.x, mainCamera.transform.position.y, -10f);
