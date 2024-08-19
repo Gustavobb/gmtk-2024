@@ -21,7 +21,8 @@ public class TrajectoryLine : MonoBehaviour
     public void RenderTrajectory(Vector3 startPos, float force, Vector2 gravity)
     {
         float timeStep = curveLength / segments;
-        Vector2 velocity = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - startPos).normalized * force;
+        Vector2 mouseClamped = new Vector2(Mathf.Clamp(Input.mousePosition.x, 0, Screen.width), Mathf.Clamp(Input.mousePosition.y, 0, Screen.height));
+        Vector2 velocity = (Camera.main.ScreenToWorldPoint(mouseClamped) - startPos).normalized * force;
         Vector2 position = startPos;
 
         for (int i = 0; i < segments; i++)
