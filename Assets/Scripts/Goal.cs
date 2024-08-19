@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Goal : MonoBehaviour
 {
-    private LevelManager levelManager;
+    [SerializeField] private LevelManager levelManager;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Sprite openedSprite;
 
