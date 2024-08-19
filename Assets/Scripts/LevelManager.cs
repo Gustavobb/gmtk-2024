@@ -19,4 +19,13 @@ public class LevelManager : MonoBehaviour
     private void ResetLevel(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+    public void LoadNextLevel(){
+        
+    }
+
+    private IEnumerator LoadNextLevelCoroutine(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        yield return null;
+    }
 }
