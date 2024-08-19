@@ -292,6 +292,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8171728404789814613}
     m_Modifications:
+    - target: {fileID: 528979295064116309, guid: 96602f14a137c40ddb4491774f4cb110, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1645912122733137789}
+    - target: {fileID: 528979295064116309, guid: 96602f14a137c40ddb4491774f4cb110, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResetLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 528979295064116309, guid: 96602f14a137c40ddb4491774f4cb110, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LevelManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 528979295064116309, guid: 96602f14a137c40ddb4491774f4cb110, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447926327883171480, guid: 96602f14a137c40ddb4491774f4cb110, type: 3}
+      propertyPath: m_Name
+      value: Reset_button
+      objectReference: {fileID: 0}
+    - target: {fileID: 4306677846031477784, guid: 96602f14a137c40ddb4491774f4cb110, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 82
+      objectReference: {fileID: 0}
     - target: {fileID: 4901438624644316281, guid: 96602f14a137c40ddb4491774f4cb110, type: 3}
       propertyPath: m_Pivot.x
       value: 0
