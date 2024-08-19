@@ -12,12 +12,26 @@ public class ScalePowerUp : MonoBehaviour
     }
 
     [SerializeField] private PowerUpType powerUpType;
+    [SerializeField] private GameObject hitEffect;
+    [SerializeField] private GameObject sprites;
+    [SerializeField] private BoxCollider2D boxCollider;
     public Rigidbody2D rb;
     public ScalePowerUpManager scalePowerUpManager;
 
     private const string SCALABLE_TAG = "Scalable";
     private const string CONNECTOR_TAG = "Connector";
     private const string POWER_UP_BOUNCER_TAG = "PowerUpBouncer";
+    
+    private void Start()
+    {
+        hitEffect.SetActive(false);
+    }
+
+    private void OnEnable()
+    {
+        sprites.SetActive(true);
+        boxCollider.enabled = true;
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -38,7 +52,7 @@ public class ScalePowerUp : MonoBehaviour
             );
         }
 
-        gameObject.SetActive(false);
+        StartCoroutine(WaitToDeactivate());
     }
 
     private void OnDisable()
@@ -60,5 +74,17 @@ public class ScalePowerUp : MonoBehaviour
                 funcScaleDown();
                 break;
         }
+    }
+
+    private IEnumerator WaitToDeactivate()
+    {
+        boxCollider.enabled = false;
+        rb.velocity = Vector2.zero;
+        rb.angularVelocity = 0f;
+        hitEffect.SetActive(true);
+        sprites.SetActive(false);
+        yield return new WaitForSeconds(2f);
+        hitEffect.SetActive(false);
+        gameObject.SetActive(false);
     }
 }
