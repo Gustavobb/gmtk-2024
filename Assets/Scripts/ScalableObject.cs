@@ -24,6 +24,9 @@ public class ScalableObject : MonoBehaviour
     [Header("Easing")]
     [SerializeField] private float duration = 1f;
     [SerializeField] private Easing.EasingType easingType = Easing.EasingType.Linear;
+    [SerializeField] private List<ArrowVisual> arrowsOutside, arrowsInside;
+    [SerializeField] private float arrowsScale = 0.05f;
+    public Vector3 ScaleDirection;
     private Func<float, float> ease;
     private Queue<Action> scaleFunctions = new Queue<Action>();
     public bool isScaling;
@@ -46,6 +49,20 @@ public class ScalableObject : MonoBehaviour
         GameObjectUpdateManager.PerformUpdate -= PerformUpdate;
     }
 
+    [EButton]
+    private void NormalizeArrowsSize()
+    {
+        foreach (ArrowVisual arrow in arrowsOutside)
+        {
+            arrow.NormalizeArrowScale();
+        }
+
+        foreach (ArrowVisual arrow in arrowsInside)
+        {
+            arrow.NormalizeArrowScale();
+        }
+    } 
+
     public void PerformUpdate()
     {
         // tava dando erro no reset
@@ -62,6 +79,7 @@ public class ScalableObject : MonoBehaviour
     {
         ease = Easing.GetEasingFunction(easingType);
         GameObjectUpdateManager.PerformUpdate += PerformUpdate;
+        NormalizeArrowsSize();
     }
 
     public void ScaleDownQueue()
@@ -84,7 +102,9 @@ public class ScalableObject : MonoBehaviour
         if ((transform.localScale + scale).y < minScale.y) scale.y = minScale.y - transform.localScale.y;
         CalculateScaleBehaviour(ref scale, ref translation);
 
+        ScaleDirection = new Vector3(Mathf.Abs(translation.x) > 0.01f ? Mathf.Sign(translation.x) : 0f, Mathf.Abs(translation.y) > 0.01f ? Mathf.Sign(translation.y) : 0f, 0f);
         onScaleDown?.Invoke();
+
         StartCoroutine(ScaleCoroutine(scale, translation));
     }
 
@@ -98,7 +118,9 @@ public class ScalableObject : MonoBehaviour
         if ((maxScale - transform.localScale).y < scale.y) scale.y = maxScale.y - transform.localScale.y;
         CalculateScaleBehaviour(ref scale, ref translation);
         
+        ScaleDirection = new Vector3(Mathf.Abs(translation.x) > 0.01f ? Mathf.Sign(translation.x) : 0f, Mathf.Abs(translation.y) > 0.01f ? Mathf.Sign(translation.y) : 0f, 0f);
         onScaleUp?.Invoke();
+
         StartCoroutine(ScaleCoroutine(scale, translation));
     }
 
@@ -158,11 +180,71 @@ public class ScalableObject : MonoBehaviour
             transform.localPosition = Vector3.Lerp(initialPosition, endPosition, ease(time / duration));
 
             time += Time.deltaTime;
+            NormalizeArrowsSize();
             yield return null;
         }
 
         transform.localScale = endScale;
         transform.localPosition = endPosition;
         isScaling = false;
+        NormalizeArrowsSize();
+    }
+
+    public bool CanScaleOnXUp(bool isInside)
+    {
+        bool result = (scaleBehaviourX == ScaleBehaviour.AxisPlus || scaleBehaviourX == ScaleBehaviour.Uniform);
+
+        if (!isInside)
+        {
+            return result && transform.localScale.x < maxScale.x;
+        }
+
+        return result && transform.localScale.x > minScale.x;
+    }
+
+    private bool LessThan(float a, float b, float epsilon = 0.0001f)
+    {
+        return a - b < epsilon;
+    }
+
+    private bool GreaterThan(float a, float b, float epsilon = 0.0001f)
+    {
+        return a - b > epsilon;
+    }
+
+    public bool CanScaleOnXDown(bool isInside)
+    {
+        bool result = (scaleBehaviourX == ScaleBehaviour.AxisMinus || scaleBehaviourX == ScaleBehaviour.Uniform);
+
+        if (!isInside)
+        {
+            return result && GreaterThan(maxScale.x, transform.localScale.x);
+        }
+
+        return result && !LessThan(transform.localScale.x, minScale.x);
+    }
+
+    public bool CanScaleOnYUp(bool isInside)
+    {
+        bool result = (scaleBehaviourY == ScaleBehaviour.AxisPlus || scaleBehaviourY == ScaleBehaviour.Uniform);
+
+        if (!isInside)
+        {
+            return result && GreaterThan(maxScale.y, transform.localScale.y);
+        }
+
+        return result && !LessThan(transform.localScale.y, minScale.y);
+    }
+
+    public bool CanScaleOnYDown(bool isInside)
+    {
+        bool result = (scaleBehaviourY == ScaleBehaviour.AxisMinus || scaleBehaviourY == ScaleBehaviour.Uniform);
+
+        if (!isInside)
+        {
+            return result && GreaterThan(maxScale.y, transform.localScale.y);
+        }
+
+        return result && !LessThan(transform.localScale.y, minScale.y);
     }
 }

@@ -48,8 +48,6 @@ public class LevelScaler : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (insideBox.isPlayerInside) return;
-
         if (!collision.CompareTag(PLAYER_TAG)) return;
         performUpdate = true;
         effectDirection = -1f;
@@ -61,7 +59,7 @@ public class LevelScaler : MonoBehaviour
 
         float t = effectTimeCounter / effectTime;
         t = Mathf.Clamp01(t);
-        t = effectDirection > 0f ? Easing.EaseOutSinusoidal(t) : Easing.EaseOutSinusoidal(t);
+        t = effectDirection > 0f ? Easing.EaseLinear(t) : Easing.EaseLinear(t);
         rootScaler.transform.localScale = Vector3.Lerp(initialScale, finalScale, t);
         mainCamera.transform.position = Vector3.Lerp(initialCameraPosition, transform.position, t);
         mainCamera.transform.position = new Vector3(mainCamera.transform.position.x, mainCamera.transform.position.y, -10f);

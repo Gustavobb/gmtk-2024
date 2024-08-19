@@ -16,6 +16,13 @@ public class Jumper : MonoBehaviour
     private void CheckIfCanPropelPlayer()
     {
         if (PlayerInteraction.Instance.groundedOn != gameObject) return;
-        PlayerInteraction.Instance.Propel(Vector2.up, propelForce);
+        PlayerInteraction.Instance.Propel(scalable.ScaleDirection, propelForce);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (!collision.gameObject.CompareTag(PLAYER_TAG) || PlayerInteraction.Instance.groundedOn == gameObject) return;
+        if (!scalable.isScaling) return;
+        PlayerInteraction.Instance.Propel(scalable.ScaleDirection, propelForce);
     }
 }
