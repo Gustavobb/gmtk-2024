@@ -203,7 +203,6 @@ MonoBehaviour:
   groundedOn: {fileID: 0}
   rb: {fileID: 45192324926871222}
   scalePowerUpThrower: {fileID: 6361933617041319546}
-  bulletCounter: {fileID: 0}
 --- !u!114 &6361933617041319546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,7 +215,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f1785b4699a24e04a2b23f7ff4f5d17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scalePowerUpManager: {fileID: 0}
   trajectoryLine: {fileID: 2235063486704912556}
   throwForce: 20
 --- !u!212 &7058872153795768968
@@ -261,7 +259,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 1203179182, guid: e44d8b934ef920f46bd59fb80bea511e, type: 3}
-  m_Color: {r: 0.8773585, g: 0.8773585, b: 0.8773585, a: 1}
+  m_Color: {r: 1, g: 0.63656133, b: 0.40499997, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

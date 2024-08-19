@@ -14,7 +14,6 @@ public class PlayerInteraction : MonoBehaviour
     [Header("References")]
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private ScalePowerUpThrower scalePowerUpThrower;
-    [SerializeField] private BulletCounter bulletCounter;
     private bool isGrounded;
 
     private void Awake()
@@ -32,10 +31,10 @@ public class PlayerInteraction : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             scalePowerUpThrower.ResetTrajectory();
-            if (bulletCounter.HasPlusBullet())
+            if (BulletCounter.Instance.HasPlusBullet())
             {
                 scalePowerUpThrower.ThrowPowerUp(ScalePowerUp.PowerUpType.ScaleUp);
-                bulletCounter.UsePlusBullet();
+                BulletCounter.Instance.UsePlusBullet();
                 return;
             }
 
@@ -46,10 +45,10 @@ public class PlayerInteraction : MonoBehaviour
         if (Input.GetMouseButtonUp(1))
         {
             scalePowerUpThrower.ResetTrajectory();
-            if (bulletCounter.HasMinusBullet())
+            if (BulletCounter.Instance.HasMinusBullet())
             {
                 scalePowerUpThrower.ThrowPowerUp(ScalePowerUp.PowerUpType.ScaleDown);
-                bulletCounter.UseMinusBullet();
+                BulletCounter.Instance.UseMinusBullet();
                 return;
             }
 
@@ -57,13 +56,13 @@ public class PlayerInteraction : MonoBehaviour
             return;
         }
 
-        if (Input.GetMouseButton(0) && bulletCounter.HasPlusBullet())
+        if (Input.GetMouseButton(0) && BulletCounter.Instance.HasPlusBullet())
         {
             // plot()
             scalePowerUpThrower.PlotTrajectory();
         }
 
-        if (Input.GetMouseButton(1) && bulletCounter.HasMinusBullet())
+        if (Input.GetMouseButton(1) && BulletCounter.Instance.HasMinusBullet())
         {
             // plot()
             scalePowerUpThrower.PlotTrajectory();

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BulletBox : MonoBehaviour
 {
-    [SerializeField] private BulletCounter bulletCounter;
     [SerializeField] private int plusGain, minusGain;
     private float xr, yr, zr;
     void OnDestroy(){
@@ -20,8 +19,8 @@ public class BulletBox : MonoBehaviour
     {
         if (!collision.CompareTag("Player")) return;
         SoundManager.instance.Play("AmmoBox");
-        bulletCounter.AddPlusBullets(plusGain);
-        bulletCounter.AddMinusBullets(minusGain);
+        BulletCounter.Instance.AddPlusBullets(plusGain);
+        BulletCounter.Instance.AddMinusBullets(minusGain);
         gameObject.SetActive(false);
     }
 

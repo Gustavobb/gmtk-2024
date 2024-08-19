@@ -6,7 +6,6 @@ public class Connector : MonoBehaviour
 {
     private const string CONNECTOR_TAG = "Connector";
     private const string SCALABLE_TAG = "Scalable";
-
     public enum ConnectorType
     {
         Grower,
@@ -22,12 +21,6 @@ public class Connector : MonoBehaviour
             ScalableObject scalable = collision.gameObject.GetComponent<ScalableObject>();
             if (scalable.isScaling) return;
 
-            // if (collision.gameObject.CompareTag(CONNECTOR_TAG))
-            // {
-            //     collision.transform.parent = transform;
-            // }
-
-            // for queueing
             switch (connectorType)
             {
                 case ConnectorType.Grower:

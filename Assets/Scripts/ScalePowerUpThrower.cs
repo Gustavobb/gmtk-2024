@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ScalePowerUpThrower : MonoBehaviour
 {
-    [SerializeField] private ScalePowerUpManager scalePowerUpManager;
     [SerializeField] private TrajectoryLine trajectoryLine;
 
     [Header("Throwing")]
@@ -22,7 +21,7 @@ public class ScalePowerUpThrower : MonoBehaviour
 
     public void ThrowPowerUp(ScalePowerUp.PowerUpType powerUpType)
     {
-        ScalePowerUp powerUp = scalePowerUpManager.RequestScalePowerUp(powerUpType);
+        ScalePowerUp powerUp = ScalePowerUpManager.Instance.RequestScalePowerUp(powerUpType);
         if (powerUp == null) return;
 
         ResetTrajectory();

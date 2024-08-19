@@ -84,12 +84,14 @@ public class ScalableObject : MonoBehaviour
 
     public void ScaleDownQueue()
     {
-        scaleFunctions.Enqueue(ScaleDown);
+        if (transform.localScale.x > minScale.x || transform.localScale.y > minScale.y)
+            scaleFunctions.Enqueue(ScaleDown);
     }
 
     public void ScaleUpQueue()
     {
-        scaleFunctions.Enqueue(ScaleUp);
+        if (transform.localScale.x < maxScale.x || transform.localScale.y < maxScale.y)
+            scaleFunctions.Enqueue(ScaleUp);
     }
 
     [EButton]

@@ -27,6 +27,7 @@ public class LevelScaler : MonoBehaviour
         GameObjectUpdateManager.PerformFixedUpdate += PerformFixedUpdate;
         rootScaler = GetLevelScalerParentRecursive();
         performUpdate = false;
+        mainCamera = Camera.main;
     }
 
     public LevelScaler GetLevelScalerParentRecursive()
@@ -58,7 +59,7 @@ public class LevelScaler : MonoBehaviour
 
         float t = effectTimeCounter / effectTime;
         t = Mathf.Clamp01(t);
-        t = effectDirection > 0f ? Easing.EaseOutQuintic(t) : Easing.EaseOutQuintic(t);
+        t = effectDirection > 0f ? Easing.EaseOutCubic(t) : Easing.EaseInExpo(t);
         rootScaler.transform.localScale = Vector3.Lerp(initialScale, finalScale, t);
         mainCamera.transform.position = Vector3.Lerp(initialCameraPosition, transform.position, t);
         mainCamera.transform.position = new Vector3(mainCamera.transform.position.x, mainCamera.transform.position.y, -10f);

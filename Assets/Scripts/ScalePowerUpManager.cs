@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class ScalePowerUpManager : MonoBehaviour
 {
+    public static ScalePowerUpManager Instance;
     [SerializeField] private ScalePowerUp scaleUp, scaleDown;
     [SerializeField] private int poolSize = 5;
 
     private Queue<ScalePowerUp> scalePowerUpScaleUpPool = new Queue<ScalePowerUp>();
     private Queue<ScalePowerUp> scalePowerUpScaleDownPool = new Queue<ScalePowerUp>();
 
+    private void Awake()
+    {
+        Instance = this;
+    }
+    
     private void Start()
     {
         CreatePool(scalePowerUpScaleUpPool, scaleUp);

@@ -7,6 +7,12 @@ public class BulletCounter : MonoBehaviour
     [SerializeField] private float _liveImageWidth = 20;
     [SerializeField] private RectTransform plusRect, minusRect;
     [SerializeField] private int plusCount, minusCount;
+    public static BulletCounter Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
         
     private void Start()
     {

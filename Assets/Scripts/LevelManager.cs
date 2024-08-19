@@ -7,7 +7,14 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
 
-    [SerializeField] private Animator cameraAnim;
+    private Animator cameraAnim;
+    public static LevelManager Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+        cameraAnim = Camera.main.GetComponent<Animator>();
+    }
 
     // Update is called once per frame
     void Update()

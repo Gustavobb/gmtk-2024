@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class Goal : MonoBehaviour
 {
-    [SerializeField] private LevelManager levelManager;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Sprite openedSprite;
 
@@ -14,7 +13,7 @@ public class Goal : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player")){
             spriteRenderer.sprite = openedSprite;
-            levelManager.LoadNextLevel();
+            LevelManager.Instance.LoadNextLevel();
         }
     }
 }
