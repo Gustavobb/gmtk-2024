@@ -174,7 +174,7 @@ MonoBehaviour:
   speed: 5
   accelerationGrounded: 0.1
   accelerationAirborne: 0.2
-  jumpForce: 4
+  jumpForce: 5
   groundDistance: 0.55
   groundMask:
     serializedVersion: 2
