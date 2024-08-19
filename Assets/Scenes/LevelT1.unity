@@ -410,8 +410,8 @@ Transform:
   m_GameObject: {fileID: 296942912}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.8842, y: 4.75, z: 0}
-  m_LocalScale: {x: 14.2308, y: 1, z: 1}
+  m_LocalPosition: {x: 0.1427, y: 4.75, z: 0}
+  m_LocalScale: {x: 17.714499, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1981219734}
@@ -643,92 +643,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &394446413
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 407431098}
-    m_Modifications:
-    - target: {fileID: 187235363154254389, guid: 903944122a1a349d4905ea9f61d0da77, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.7134578
-      objectReference: {fileID: 0}
-    - target: {fileID: 187235363154254389, guid: 903944122a1a349d4905ea9f61d0da77, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.7134578
-      objectReference: {fileID: 0}
-    - target: {fileID: 187235363154254389, guid: 903944122a1a349d4905ea9f61d0da77, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.7134578
-      objectReference: {fileID: 0}
-    - target: {fileID: 187235363154254389, guid: 903944122a1a349d4905ea9f61d0da77, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4.59
-      objectReference: {fileID: 0}
-    - target: {fileID: 187235363154254389, guid: 903944122a1a349d4905ea9f61d0da77, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 187235363154254389, guid: 903944122a1a349d4905ea9f61d0da77, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 187235363154254389, guid: 903944122a1a349d4905ea9f61d0da77, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 187235363154254389, guid: 903944122a1a349d4905ea9f61d0da77, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 187235363154254389, guid: 903944122a1a349d4905ea9f61d0da77, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 187235363154254389, guid: 903944122a1a349d4905ea9f61d0da77, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 187235363154254389, guid: 903944122a1a349d4905ea9f61d0da77, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 187235363154254389, guid: 903944122a1a349d4905ea9f61d0da77, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 187235363154254389, guid: 903944122a1a349d4905ea9f61d0da77, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1496887342627851214, guid: 903944122a1a349d4905ea9f61d0da77, type: 3}
-      propertyPath: m_Name
-      value: GiftBox
-      objectReference: {fileID: 0}
-    - target: {fileID: 4236018301452018271, guid: 903944122a1a349d4905ea9f61d0da77, type: 3}
-      propertyPath: plusGain
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4236018301452018271, guid: 903944122a1a349d4905ea9f61d0da77, type: 3}
-      propertyPath: minusGain
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4236018301452018271, guid: 903944122a1a349d4905ea9f61d0da77, type: 3}
-      propertyPath: bulletCounter
-      value: 
-      objectReference: {fileID: 528399723}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 903944122a1a349d4905ea9f61d0da77, type: 3}
---- !u!4 &394446414 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 187235363154254389, guid: 903944122a1a349d4905ea9f61d0da77, type: 3}
-  m_PrefabInstance: {fileID: 394446413}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &407431097
 GameObject:
   m_ObjectHideFlags: 0
@@ -758,7 +672,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 394446414}
   - {fileID: 2113775983}
   - {fileID: 558644709}
   - {fileID: 1160599023}
@@ -849,6 +762,14 @@ PrefabInstance:
       propertyPath: minusRect
       value: 
       objectReference: {fileID: 1712847376}
+    - target: {fileID: 6042665538538729641, guid: 32633aff2ba85409f9317b6dc0b5e931, type: 3}
+      propertyPath: plusCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6042665538538729641, guid: 32633aff2ba85409f9317b6dc0b5e931, type: 3}
+      propertyPath: minusCount
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6319458188591872425, guid: 32633aff2ba85409f9317b6dc0b5e931, type: 3}
       propertyPath: m_Name
       value: Managers
