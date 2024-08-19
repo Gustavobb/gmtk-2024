@@ -17,6 +17,8 @@ public class GameCamera : MonoBehaviour
         float currentFloat = outlineMaterial.GetFloat(shaderPropertyID);
         float elapsedTime = 0;
         float duration = .5f;
+        if (targetFloat != 0)
+            yield return new WaitForSeconds(0.5f);
         
         while (elapsedTime < duration)
         {
