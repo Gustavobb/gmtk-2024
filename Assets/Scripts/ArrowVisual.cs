@@ -18,7 +18,7 @@ public class ArrowVisual : MonoBehaviour
     [SerializeField] private ArrowType arrowType;
     private Func<bool, bool> scaleCheck;
 
-    private void Start()
+    private void Awake()
     {
         switch (arrowType)
         {
