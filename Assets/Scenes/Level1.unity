@@ -979,6 +979,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8217994387309290789, guid: fdd6163d30b004099b4538dc6e239cac, type: 3}
   m_PrefabInstance: {fileID: 882038130}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &887470940 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3284463135590738624, guid: 0b6fa75c9520f4acbaf3c5d774cb42ef, type: 3}
+  m_PrefabInstance: {fileID: 2647136247210214595}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &902433506 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6042665538538729641, guid: 32633aff2ba85409f9317b6dc0b5e931, type: 3}
@@ -1657,6 +1662,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -33.80005
       objectReference: {fileID: 0}
+    - target: {fileID: 6870592147047500795, guid: 96602f14a137c40ddb4491774f4cb110, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -23.599976
+      objectReference: {fileID: 0}
     - target: {fileID: 6912982885273315050, guid: 96602f14a137c40ddb4491774f4cb110, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -1802,11 +1811,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3223807554260757035, guid: 0b6fa75c9520f4acbaf3c5d774cb42ef, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.66
+      value: -5.97
       objectReference: {fileID: 0}
     - target: {fileID: 3223807554260757035, guid: 0b6fa75c9520f4acbaf3c5d774cb42ef, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.85
+      value: -3.09
       objectReference: {fileID: 0}
     - target: {fileID: 3223807554260757035, guid: 0b6fa75c9520f4acbaf3c5d774cb42ef, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1845,8 +1854,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1957399982}
     - target: {fileID: 7034082234272242311, guid: 0b6fa75c9520f4acbaf3c5d774cb42ef, type: 3}
-      propertyPath: jumpForce
-      value: 5
+      propertyPath: _animator
+      value: 
+      objectReference: {fileID: 887470940}
+    - target: {fileID: 7058872153795768968, guid: 0b6fa75c9520f4acbaf3c5d774cb42ef, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 7117421126932690913, guid: 0b6fa75c9520f4acbaf3c5d774cb42ef, type: 3}
       propertyPath: bulletCounter
