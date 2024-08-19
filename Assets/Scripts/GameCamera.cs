@@ -17,7 +17,7 @@ public class GameCamera : MonoBehaviour
         float currentFloat = outlineMaterial.GetFloat(shaderPropertyID);
         float elapsedTime = 0;
         float duration = .5f;
-
+        
         while (elapsedTime < duration)
         {
             outlineMaterial.SetFloat(shaderPropertyID, Mathf.Lerp(currentFloat, targetFloat, elapsedTime / duration));

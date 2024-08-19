@@ -42,7 +42,7 @@ public class LevelManager : MonoBehaviour
         reset.SetActive(false);
         yield return new WaitForSeconds(.1f);
         cameraAnim.SetTrigger("ZoomReset");
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(.8f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
@@ -56,7 +56,7 @@ public class LevelManager : MonoBehaviour
         reset.SetActive(false);
         yield return new WaitForSeconds(.1f);
         cameraAnim.SetTrigger("ZoomOut");
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(1.3f);
         if(SceneManager.GetActiveScene().name =="Credits") SceneManager.LoadScene("Menu");
         else SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
