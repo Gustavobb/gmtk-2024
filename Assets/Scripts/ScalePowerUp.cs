@@ -21,6 +21,7 @@ public class ScalePowerUp : MonoBehaviour
     private const string SCALABLE_TAG = "Scalable";
     private const string CONNECTOR_TAG = "Connector";
     private const string POWER_UP_BOUNCER_TAG = "PowerUpBouncer";
+    private bool isDying = false;
     
     private void Start()
     {
@@ -29,12 +30,14 @@ public class ScalePowerUp : MonoBehaviour
 
     private void OnEnable()
     {
+        isDying = false;
         sprites.SetActive(true);
-        boxCollider.enabled = true;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (isDying) return;
+        
         if (collision.gameObject.CompareTag(POWER_UP_BOUNCER_TAG))
         {
             rb.AddForce(collision.GetContact(0).normal * 10f, ForceMode2D.Impulse);
@@ -78,7 +81,7 @@ public class ScalePowerUp : MonoBehaviour
 
     private IEnumerator WaitToDeactivate()
     {
-        boxCollider.enabled = false;
+        isDying = true;
         rb.velocity = Vector2.zero;
         rb.angularVelocity = 0f;
         hitEffect.SetActive(true);
