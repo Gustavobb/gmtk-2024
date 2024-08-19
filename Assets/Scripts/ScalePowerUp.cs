@@ -82,6 +82,7 @@ public class ScalePowerUp : MonoBehaviour
         rb.velocity = Vector2.zero;
         rb.angularVelocity = 0f;
         hitEffect.SetActive(true);
+        SoundManager.instance.Play("Impact");
         sprites.SetActive(false);
         yield return new WaitForSeconds(2f);
         hitEffect.SetActive(false);

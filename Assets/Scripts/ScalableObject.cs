@@ -171,6 +171,13 @@ public class ScalableObject : MonoBehaviour
         Vector3 initialScale = transform.localScale;
         Vector3 endScale = initialScale + scaleAmount;
 
+        if(endScale.x < initialScale.x || endScale.y < initialScale.y){
+            SoundManager.instance.Play("Shrink");
+        }
+        else{
+            SoundManager.instance.Play("Grow");
+        }
+
         Vector3 initialPosition = transform.localPosition;
         Vector3 endPosition = initialPosition + translationAmount;
 

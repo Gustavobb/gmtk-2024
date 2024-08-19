@@ -19,7 +19,7 @@ public class BulletBox : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.CompareTag("Player")) return;
-
+        SoundManager.instance.Play("AmmoBox");
         bulletCounter.AddPlusBullets(plusGain);
         bulletCounter.AddMinusBullets(minusGain);
         gameObject.SetActive(false);
