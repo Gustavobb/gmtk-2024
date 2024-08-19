@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
+    [SerializeField] private GameObject plus, minus, reset;
 
     private Animator cameraAnim;
     public static LevelManager Instance;
@@ -16,6 +17,20 @@ public class LevelManager : MonoBehaviour
         cameraAnim = Camera.main.GetComponent<Animator>();
     }
 
+    private void Awake(){
+        StartCoroutine("ActivateUI");
+    }
+
+    private IEnumerator ActivateUI(){
+        minus.SetActive(false);
+        plus.SetActive(false);
+        reset.SetActive(false);
+        yield return new WaitForSeconds(.8f);
+        minus.SetActive(true);
+        plus.SetActive(true);
+        reset.SetActive(true);
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -24,14 +39,17 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    private void ResetLevel(){
+    public void ResetLevel(){
         StartCoroutine("ResetLevelCoroutine");
     }
 
     private IEnumerator ResetLevelCoroutine(){
+        minus.SetActive(false);
+        plus.SetActive(false);
+        reset.SetActive(false);
         yield return new WaitForSeconds(.1f);
         cameraAnim.SetTrigger("ZoomReset");
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(.8f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
@@ -40,9 +58,13 @@ public class LevelManager : MonoBehaviour
     }
 
     private IEnumerator LoadNextLevelCoroutine(){
+        minus.SetActive(false);
+        plus.SetActive(false);
+        reset.SetActive(false);
         yield return new WaitForSeconds(.1f);
         cameraAnim.SetTrigger("ZoomOut");
-        yield return new WaitForSeconds(.5f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        yield return new WaitForSeconds(1.3f);
+        if(SceneManager.GetActiveScene().name =="Credits") SceneManager.LoadScene("Menu");
+        else SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
