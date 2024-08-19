@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trajectoryLine: {fileID: 2235063486704912556}
-  throwForce: 20
+  throwForce: 12
 --- !u!212 &7058872153795768968
 SpriteRenderer:
   m_ObjectHideFlags: 0

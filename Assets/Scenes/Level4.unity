@@ -150,7 +150,7 @@ Transform:
   m_GameObject: {fileID: 125604243}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.48, y: 1.71, z: 0}
+  m_LocalPosition: {x: -3.33, y: 1.71, z: 0}
   m_LocalScale: {x: 2.8727071, y: 0.5872, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -650,7 +650,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9216242852580245366, guid: c182d0918591c224ba261641a93a1899, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.29
+      value: -2.9417446
       objectReference: {fileID: 0}
     - target: {fileID: 9216242852580245366, guid: c182d0918591c224ba261641a93a1899, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1499,8 +1499,8 @@ Transform:
   m_GameObject: {fileID: 1523065226}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.4886, y: 0.19, z: 0.16}
-  m_LocalScale: {x: 0.42904988, y: 3.7072911, z: 1}
+  m_LocalPosition: {x: 3.4886, y: -0.4557, z: 0.16}
+  m_LocalScale: {x: 0.42904988, y: 2.4160416, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 159769066}
@@ -1636,15 +1636,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8217994387309290789, guid: fdd6163d30b004099b4538dc6e239cac, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.875418
+      value: 4.526141
       objectReference: {fileID: 0}
     - target: {fileID: 8217994387309290789, guid: fdd6163d30b004099b4538dc6e239cac, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.3565
+      value: 0.6126
       objectReference: {fileID: 0}
     - target: {fileID: 8217994387309290789, guid: fdd6163d30b004099b4538dc6e239cac, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.2
+      value: -3.095
       objectReference: {fileID: 0}
     - target: {fileID: 8217994387309290789, guid: fdd6163d30b004099b4538dc6e239cac, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1695,6 +1695,10 @@ PrefabInstance:
       propertyPath: cameraAnim
       value: 
       objectReference: {fileID: 333413635}
+    - target: {fileID: 6042665538538729641, guid: 32633aff2ba85409f9317b6dc0b5e931, type: 3}
+      propertyPath: plusCount
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6319458188591872425, guid: 32633aff2ba85409f9317b6dc0b5e931, type: 3}
       propertyPath: m_Name
       value: Managers

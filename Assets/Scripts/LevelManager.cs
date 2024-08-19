@@ -15,9 +15,6 @@ public class LevelManager : MonoBehaviour
     {
         Instance = this;
         cameraAnim = Camera.main.GetComponent<Animator>();
-    }
-
-    private void Awake(){
         StartCoroutine("ActivateUI");
     }
 
