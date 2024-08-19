@@ -22,6 +22,8 @@ public class Player : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private Rigidbody2D rb;
+
+    [SerializeField] private Animator _animator;
     private bool isGrounded;
     private float horizontalInput;
     private float velocityXSmoothing;
@@ -35,6 +37,7 @@ public class Player : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, groundDistance, groundMask);
 
         isGrounded = hit.collider != null;
+        _animator.SetFloat("Yspeed", Mathf.Abs(rb.velocity.y));
 
         if (isGrounded)
         {
@@ -63,6 +66,8 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         float targetVelocityX = horizontalInput * speed;
+
+        _animator.SetInteger("Speed", Mathf.Abs((int)targetVelocityX));
 
         float smoothSpeed = Mathf.SmoothDamp(rb.velocity.x, targetVelocityX, ref velocityXSmoothing, isGrounded ? accelerationGrounded : accelerationAirborne);
 
