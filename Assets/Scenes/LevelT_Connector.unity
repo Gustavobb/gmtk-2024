@@ -6109,11 +6109,11 @@ PrefabInstance:
       objectReference: {fileID: 110473511}
     - target: {fileID: 6042665538538729641, guid: 32633aff2ba85409f9317b6dc0b5e931, type: 3}
       propertyPath: plusCount
-      value: 9
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6042665538538729641, guid: 32633aff2ba85409f9317b6dc0b5e931, type: 3}
       propertyPath: minusCount
-      value: 9
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6319458188591872425, guid: 32633aff2ba85409f9317b6dc0b5e931, type: 3}
       propertyPath: m_Name
