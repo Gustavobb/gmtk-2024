@@ -181,14 +181,14 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Shrink
-    clip: {fileID: 8300000, guid: 7303b2ee767620c4ba70d8eb369278aa, type: 3}
-    volume: 0.3
+    clip: {fileID: 8300000, guid: 9a04186122aea3d4d8dd72cda9a0b7ba, type: 3}
+    volume: 0.05
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Victory
-    clip: {fileID: 8300000, guid: 5b25f30115734a246a602f5e5ecef1ab, type: 3}
-    volume: 0.3
+    clip: {fileID: 8300000, guid: 36d6aa732b2e07b42aeb71ae65cdbe3b, type: 3}
+    volume: 0.075
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -200,7 +200,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: AmmoBox
     clip: {fileID: 8300000, guid: 4e99469b3d2b1cb40a1da5ffc9f324b4, type: 3}
-    volume: 0.3
+    volume: 0.4
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -236,7 +236,7 @@ MonoBehaviour:
     source: {fileID: 0}
   musics:
   - name: Music
-    clip: {fileID: 8300000, guid: 485625f16760b4501b09f12c16bb06a0, type: 3}
+    clip: {fileID: 8300000, guid: 4658a2f341101d643a64cba989cefe9b, type: 3}
     volume: 0.2
     pitch: 1
     loop: 1
