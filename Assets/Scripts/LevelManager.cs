@@ -44,6 +44,7 @@ public class LevelManager : MonoBehaviour
         minus.SetActive(false);
         plus.SetActive(false);
         reset.SetActive(false);
+        SoundManager.instance.Play("Reset");
         yield return new WaitForSeconds(.1f);
         cameraAnim.SetTrigger("ZoomReset");
         yield return new WaitForSeconds(.8f);
