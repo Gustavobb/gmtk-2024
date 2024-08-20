@@ -3941,6 +3941,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: GiftBox
       objectReference: {fileID: 0}
+    - target: {fileID: 2995128153340563602, guid: 903944122a1a349d4905ea9f61d0da77, type: 3}
+      propertyPath: m_Size.x
+      value: 1.4213085
+      objectReference: {fileID: 0}
+    - target: {fileID: 2995128153340563602, guid: 903944122a1a349d4905ea9f61d0da77, type: 3}
+      propertyPath: m_Size.y
+      value: 1.4661288
+      objectReference: {fileID: 0}
+    - target: {fileID: 2995128153340563602, guid: 903944122a1a349d4905ea9f61d0da77, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.013446093
+      objectReference: {fileID: 0}
+    - target: {fileID: 2995128153340563602, guid: 903944122a1a349d4905ea9f61d0da77, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.017928153
+      objectReference: {fileID: 0}
     - target: {fileID: 4236018301452018271, guid: 903944122a1a349d4905ea9f61d0da77, type: 3}
       propertyPath: plusGain
       value: 2
