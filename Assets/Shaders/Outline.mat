@@ -47,7 +47,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _ColorThreshold: 0.02
-    - _Fade: 0
+    - _Fade: 0.983001
     - _NormalThreshold: 0.5
     - _OVERLAY: 1
     m_Colors:
