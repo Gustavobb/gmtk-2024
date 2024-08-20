@@ -731,7 +731,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9216242852580245366, guid: c182d0918591c224ba261641a93a1899, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.27
+      value: 1.323595
       objectReference: {fileID: 0}
     - target: {fileID: 9216242852580245366, guid: c182d0918591c224ba261641a93a1899, type: 3}
       propertyPath: m_LocalPosition.z
@@ -898,7 +898,7 @@ Transform:
   m_GameObject: {fileID: 789043855}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.5007, y: 1.42, z: 0}
+  m_LocalPosition: {x: 7.5007, y: 0.36, z: 0}
   m_LocalScale: {x: 2.3491921, y: 0.5872, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1009,13 +1009,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 406138655}
     m_Modifications:
+    - target: {fileID: 4018423857894863223, guid: 466f82ae68604443aa25627524d35ac2, type: 3}
+      propertyPath: maxScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4018423857894863223, guid: 466f82ae68604443aa25627524d35ac2, type: 3}
+      propertyPath: maxScale.y
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4018423857894863223, guid: 466f82ae68604443aa25627524d35ac2, type: 3}
+      propertyPath: maxScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7283484147039964172, guid: 466f82ae68604443aa25627524d35ac2, type: 3}
       propertyPath: m_Name
       value: Jumper
       objectReference: {fileID: 0}
     - target: {fileID: 8128705110838592184, guid: 466f82ae68604443aa25627524d35ac2, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.7973
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 8128705110838592184, guid: 466f82ae68604443aa25627524d35ac2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1137,13 +1149,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 406138655}
     m_Modifications:
+    - target: {fileID: 4018423857894863223, guid: 466f82ae68604443aa25627524d35ac2, type: 3}
+      propertyPath: maxScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4018423857894863223, guid: 466f82ae68604443aa25627524d35ac2, type: 3}
+      propertyPath: maxScale.y
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4018423857894863223, guid: 466f82ae68604443aa25627524d35ac2, type: 3}
+      propertyPath: maxScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7283484147039964172, guid: 466f82ae68604443aa25627524d35ac2, type: 3}
       propertyPath: m_Name
       value: Jumper (1)
       objectReference: {fileID: 0}
     - target: {fileID: 8128705110838592184, guid: 466f82ae68604443aa25627524d35ac2, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.7973
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 8128705110838592184, guid: 466f82ae68604443aa25627524d35ac2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1650,13 +1674,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 406138655}
     m_Modifications:
+    - target: {fileID: 4018423857894863223, guid: 466f82ae68604443aa25627524d35ac2, type: 3}
+      propertyPath: maxScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4018423857894863223, guid: 466f82ae68604443aa25627524d35ac2, type: 3}
+      propertyPath: maxScale.y
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4018423857894863223, guid: 466f82ae68604443aa25627524d35ac2, type: 3}
+      propertyPath: maxScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7283484147039964172, guid: 466f82ae68604443aa25627524d35ac2, type: 3}
       propertyPath: m_Name
       value: Jumper (2)
       objectReference: {fileID: 0}
     - target: {fileID: 8128705110838592184, guid: 466f82ae68604443aa25627524d35ac2, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.7973
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 8128705110838592184, guid: 466f82ae68604443aa25627524d35ac2, type: 3}
       propertyPath: m_LocalPosition.x
