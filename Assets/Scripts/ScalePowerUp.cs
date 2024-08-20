@@ -37,10 +37,11 @@ public class ScalePowerUp : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (isDying) return;
-        
+
         if (collision.gameObject.CompareTag(POWER_UP_BOUNCER_TAG))
         {
             rb.AddForce(collision.GetContact(0).normal * 10f, ForceMode2D.Impulse);
+            SoundManager.instance.Play("Bouncer");
             return;
         }
 
