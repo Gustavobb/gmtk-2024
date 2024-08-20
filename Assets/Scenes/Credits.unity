@@ -176,6 +176,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6361933617041319546, guid: 0b6fa75c9520f4acbaf3c5d774cb42ef, type: 3}
+      propertyPath: throwForce
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361933617041319546, guid: 0b6fa75c9520f4acbaf3c5d774cb42ef, type: 3}
       propertyPath: scalePowerUpManager
       value: 
       objectReference: {fileID: 985000707}
@@ -869,7 +873,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9216242852580245366, guid: c182d0918591c224ba261641a93a1899, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.65
+      value: -2.75
       objectReference: {fileID: 0}
     - target: {fileID: 9216242852580245366, guid: c182d0918591c224ba261641a93a1899, type: 3}
       propertyPath: m_LocalPosition.z

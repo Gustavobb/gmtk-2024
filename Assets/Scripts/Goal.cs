@@ -21,6 +21,7 @@ public class Goal : MonoBehaviour
             spriteRenderer.sprite = openedSprite;
             portal.SetActive(true);
             SoundManager.instance.Play("Victory");
+            GetComponent<Collider2D>().enabled = false;
             StartCoroutine(WaitAndLoadNextLevel());
         }
     }
