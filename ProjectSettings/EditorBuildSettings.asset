@@ -7,16 +7,10 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
-    guid: 9abdd82fd7cffd8419ba067789f2b95f
+    guid: 7e226e1415c7f974db00f35cfa6c3c59
   - enabled: 1
-    path: Assets/Scenes/Level1.unity
-    guid: 91a22700cf698024c9d4bb2b72c403a8
-  - enabled: 1
-    path: Assets/Scenes/Level1.5.unity
-    guid: 854d08bb650874769951ae28e234d0a9
-  - enabled: 1
-    path: Assets/Scenes/Level2.unity
-    guid: 858ffce1aa7194f328cabacdabcfce42
+    path: Assets/Scenes/Level3.unity
+    guid: 01b93fe14bec1794fb4091778396112e
   - enabled: 1
     path: Assets/Scenes/Level4.unity
     guid: 6810904921b522d47b5912924aa0976b
@@ -36,15 +30,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Level9.unity
     guid: 28a836e2590663948b1b0ffc5acf7f54
   - enabled: 1
-    path: Assets/Scenes/Level10.unity
-    guid: 28472f46cae7c294faa9fdccfb61a308
-  - enabled: 1
-    path: Assets/Scenes/Level11.unity
-    guid: 7c2ae205a5e14794f9a03d72a4c3768b
-  - enabled: 1
-    path: Assets/Scenes/Level12.unity
-    guid: c1a589f9f4d7e46e6889eb34950518a0
-  - enabled: 1
     path: Assets/Scenes/Level13.unity
     guid: 05034c6ab611f7741b670c91557a5951
   - enabled: 1
@@ -59,6 +44,27 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level17.unity
     guid: f2e6910795b174df29de7f39a209dad3
+  - enabled: 1
+    path: Assets/Scenes/Level18 1.unity
+    guid: 9dee4dafb8622cf4b8a3f49c6e70ab82
+  - enabled: 1
+    path: Assets/Scenes/Level18.unity
+    guid: 38586a6acfa0d5f4ba79b24b546869ba
+  - enabled: 1
+    path: Assets/Scenes/Level19.unity
+    guid: 258543acda81dd8408cd3e9440acc0e4
+  - enabled: 1
+    path: Assets/Scenes/Level10.unity
+    guid: 28472f46cae7c294faa9fdccfb61a308
+  - enabled: 1
+    path: Assets/Scenes/Level11.unity
+    guid: c1a589f9f4d7e46e6889eb34950518a0
+  - enabled: 1
+    path: Assets/Scenes/Level12.unity
+    guid: 7c2ae205a5e14794f9a03d72a4c3768b
+  - enabled: 1
+    path: Assets/Scenes/Level12.5.unity
+    guid: eaeeda5d6232a754f8cdd49620aeb3b9
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 0460c196cbe5f3c43be2c89ed0cd2039
