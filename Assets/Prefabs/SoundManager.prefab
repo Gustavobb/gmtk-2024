@@ -211,21 +211,34 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Jump
-    clip: {fileID: 8300000, guid: 556eccfa8cbefa244b8398f68587a2fb, type: 3}
-    volume: 0.15
+    clip: {fileID: 8300000, guid: 54b55ffdd0e88401f8e45092d02d2bcb, type: 3}
+    volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Shoot
-    clip: {fileID: 8300000, guid: 4f83e38204c072d42b25224f8b7cd337, type: 3}
-    volume: 0.2
+    clip: {fileID: 8300000, guid: 7c8720f46d79242799d268e50b536e3c, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Bouncer
+    clip: {fileID: 8300000, guid: a90cb9a17690443c8a087b90bed9e805, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Button
+    clip: {fileID: 8300000, guid: ba65a9673b6d344dbb904e6a34648f88, type: 3}
+    volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}
   musics:
   - name: Music
-    clip: {fileID: 8300000, guid: 08fdc0eecf6422b4d80873ab8dd0daa4, type: 3}
-    volume: 0
-    pitch: 0
-    loop: 0
+    clip: {fileID: 8300000, guid: 485625f16760b4501b09f12c16bb06a0, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 1
     source: {fileID: 0}
+  randomizePitch: 1

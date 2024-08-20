@@ -227,11 +227,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fba6f94c86fd50409cd634ca8b3287b, type: 3}
---- !u!95 &315888820 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 6434636565595336482, guid: 0fba6f94c86fd50409cd634ca8b3287b, type: 3}
-  m_PrefabInstance: {fileID: 315888819}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &369053778
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1552,6 +1547,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Global Volume
       objectReference: {fileID: 0}
+    - target: {fileID: 8734980620004297068, guid: a3b8b2d30037347ed912b877ee558373, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1634,14 +1633,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1645912122733137789, guid: 32633aff2ba85409f9317b6dc0b5e931, type: 3}
-      propertyPath: cameraAnim
-      value: 
-      objectReference: {fileID: 315888820}
-    - target: {fileID: 6042665538538729641, guid: 32633aff2ba85409f9317b6dc0b5e931, type: 3}
-      propertyPath: _liveImageWidth
-      value: 30
-      objectReference: {fileID: 0}
     - target: {fileID: 6319458188591872425, guid: 32633aff2ba85409f9317b6dc0b5e931, type: 3}
       propertyPath: m_Name
       value: Managers

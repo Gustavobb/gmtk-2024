@@ -6,6 +6,7 @@ public class GameCamera : MonoBehaviour
 {
     [SerializeField] private Material outlineMaterial;
     private int shaderPropertyID = Shader.PropertyToID("_Fade");
+    public bool wait;
 
     public void AnimateFade(float targetFloat)
     {
@@ -17,7 +18,7 @@ public class GameCamera : MonoBehaviour
         float currentFloat = outlineMaterial.GetFloat(shaderPropertyID);
         float elapsedTime = 0;
         float duration = .5f;
-        if (targetFloat != 0)
+        if (wait)
             yield return new WaitForSeconds(0.5f);
         
         while (elapsedTime < duration)

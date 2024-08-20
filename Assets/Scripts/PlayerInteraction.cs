@@ -15,6 +15,7 @@ public class PlayerInteraction : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private ScalePowerUpThrower scalePowerUpThrower;
     private bool isGrounded;
+    public static bool isScaling = false;
 
     private void Awake()
     {

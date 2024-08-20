@@ -38,12 +38,13 @@ public class LevelScaler : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!collision.CompareTag(PLAYER_TAG) || performUpdate) return;
+        if (!collision.CompareTag(PLAYER_TAG) || performUpdate || PlayerInteraction.isScaling) return;
         performUpdate = true;
         initialScale = rootScaler.transform.localScale;
         initialCameraPosition = mainCamera.transform.position;
         // effectTimeCounter = 0f;
         effectDirection = 1f;
+        PlayerInteraction.isScaling = true;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -73,6 +74,7 @@ public class LevelScaler : MonoBehaviour
             mainCamera.transform.position = effectDirection > 0f ? transform.position : initialCameraPosition;
             mainCamera.transform.position = new Vector3(mainCamera.transform.position.x, mainCamera.transform.position.y, -10f);
             effectTimeCounter = Mathf.Clamp(effectTimeCounter, 0f, effectTime);
+            PlayerInteraction.isScaling = false;
         }
     }
 }

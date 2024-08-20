@@ -43,10 +43,10 @@ public class SoundManager : MonoBehaviour
     public void Play(string name){
         Sound_controller s = Array.Find(sounds, sound => sound.name == name);
         if (s == null){
-            Debug.Log("Som " + name + " errado");
+            // Debug.Log("Som " + name + " errado");
             return;
         }
-        Debug.Log("Play Som " + name);
+        // Debug.Log("Play Som " + name);
         if (randomizePitch){
             s.source.pitch = UnityEngine.Random.Range(s.pitch - 0.1f, s.pitch + 0.1f);
         }
@@ -56,7 +56,7 @@ public class SoundManager : MonoBehaviour
     public void PlayWithSettings(string name, float volume, float pitch, float time = 0){
         Sound_controller s = Array.Find(sounds, sound => sound.name == name);
         if (s == null){
-            Debug.Log("Som " + name + " errado");
+            // Debug.Log("Som " + name + " errado");
             return;
         }
         s.source.time = time;
@@ -68,7 +68,7 @@ public class SoundManager : MonoBehaviour
     public void Stop(string name){
         Sound_controller s = Array.Find(sounds, sound => sound.name == name);
         if (s == null){
-            Debug.Log("Som " + name + " errado");
+            // Debug.Log("Som " + name + " errado");
             return;
         }
         s.source.Stop();
@@ -78,7 +78,7 @@ public class SoundManager : MonoBehaviour
         musicSource = this.gameObject.transform.GetChild(0).gameObject.GetComponent<AudioSource>();
         Sound_controller music = Array.Find(musics, music => music.name == name);
         if (music == null){
-            Debug.Log("Som " + name + " errado");
+            // Debug.Log("Som " + name + " errado");
             return;
         }
         AudioClip clip = music.clip;
