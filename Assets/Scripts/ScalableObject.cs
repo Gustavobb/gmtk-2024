@@ -15,6 +15,7 @@ public class ScalableObject : MonoBehaviour
     }
     [SerializeField] private ScaleBehaviour scaleBehaviourX = ScaleBehaviour.Uniform;
     [SerializeField] private ScaleBehaviour scaleBehaviourY = ScaleBehaviour.Uniform;
+    [SerializeField] private Rigidbody2D rb;
 
     [Header("Values")]
     [SerializeField] private Vector3 minScale = new Vector3(0.5f, 0.5f, 0.5f);
@@ -80,6 +81,7 @@ public class ScalableObject : MonoBehaviour
         ease = Easing.GetEasingFunction(easingType);
         GameObjectUpdateManager.PerformUpdate += PerformUpdate;
         NormalizeArrowsSize();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     public void ScaleDownQueue()
@@ -186,7 +188,10 @@ public class ScalableObject : MonoBehaviour
         while (time < duration)
         {
             transform.localScale = Vector3.Lerp(initialScale, endScale, ease(time / duration));
-            transform.localPosition = Vector3.Lerp(initialPosition, endPosition, ease(time / duration));
+            if (rb != null)
+                rb.velocity += new Vector2(translationAmount.x, translationAmount.y);
+            else
+                transform.localPosition = Vector3.Lerp(initialPosition, endPosition, ease(time / duration));
 
             time += Time.deltaTime;
             NormalizeArrowsSize();
@@ -194,7 +199,11 @@ public class ScalableObject : MonoBehaviour
         }
 
         transform.localScale = endScale;
-        transform.localPosition = endPosition;
+        // transform.localPosition = endPosition;
+        if (rb != null)
+            rb.velocity += new Vector2(translationAmount.x, translationAmount.y);
+        else
+            transform.localPosition = endPosition;
         isScaling = false;
         NormalizeArrowsSize();
     }
