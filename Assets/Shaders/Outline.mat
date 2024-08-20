@@ -46,11 +46,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _ColorThreshold: 0.02
+    - _ColorThreshold: 0.1
     - _Fade: 0
-    - _NormalThreshold: 0.5
+    - _NormalThreshold: 0.1
     - _OVERLAY: 1
     m_Colors:
-    - _LineWidth: {r: 3, g: 3, b: 0, a: 0}
+    - _LineWidth: {r: 2, g: 2, b: 0, a: 0}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
