@@ -8,12 +8,12 @@ public class RenderTextureManager : MonoBehaviour
 
     private void Update()
     {
-        if (Screen.width != renderTexture.width || Screen.height != renderTexture.height)
-        {
-            renderTexture.Release();
-            renderTexture.width = Screen.width;
-            renderTexture.height = Screen.height;
-            renderTexture.Create();
-        }
+        // if (Screen.width != renderTexture.width || Screen.height != renderTexture.height)
+        // {
+        //     renderTexture.Release();
+        //     renderTexture.width = Screen.width;
+        //     renderTexture.height = Screen.height;
+        //     renderTexture.Create();
+        // }
     }
 }
