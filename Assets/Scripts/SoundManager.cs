@@ -8,6 +8,7 @@ public class SoundManager : MonoBehaviour
     public Sound_controller[] musics;
     private AudioSource musicSource;
     public static SoundManager instance;
+    public bool randomizePitch = true;
     private void Awake()
     {
         if (instance == null)
@@ -46,6 +47,9 @@ public class SoundManager : MonoBehaviour
             return;
         }
         Debug.Log("Play Som " + name);
+        if (randomizePitch){
+            s.source.pitch = UnityEngine.Random.Range(s.pitch - 0.1f, s.pitch + 0.1f);
+        }
         s.source.Play();
     }
 

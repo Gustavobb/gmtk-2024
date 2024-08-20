@@ -36,6 +36,7 @@ public class Button : MonoBehaviour
 
         animator.Play();
         StartCoroutine(StopWatch());
+        SoundManager.instance.Play("Button");
     }
 
     private IEnumerator StopWatch()
