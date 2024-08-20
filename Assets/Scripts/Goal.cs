@@ -20,6 +20,7 @@ public class Goal : MonoBehaviour
         if (collision.gameObject.CompareTag("Player")){
             spriteRenderer.sprite = openedSprite;
             portal.SetActive(true);
+            SoundManager.instance.Play("Victory");
             StartCoroutine(WaitAndLoadNextLevel());
         }
     }
