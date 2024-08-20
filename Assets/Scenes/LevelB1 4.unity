@@ -264,7 +264,7 @@ PrefabInstance:
     - target: {fileID: 790434291567544654, guid: 32633aff2ba85409f9317b6dc0b5e931, type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 292398022}
+      objectReference: {fileID: 1271015948}
     - target: {fileID: 6042665538538729641, guid: 32633aff2ba85409f9317b6dc0b5e931, type: 3}
       propertyPath: plusCount
       value: 5
@@ -3190,7 +3190,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4236018301452018271, guid: 903944122a1a349d4905ea9f61d0da77, type: 3}
       propertyPath: plusGain
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4236018301452018271, guid: 903944122a1a349d4905ea9f61d0da77, type: 3}
       propertyPath: minusGain
@@ -3928,7 +3928,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5538233997001037449, guid: fdd6163d30b004099b4538dc6e239cac, type: 3}
       propertyPath: maxScale.x
-      value: 15
+      value: 14.5
       objectReference: {fileID: 0}
     - target: {fileID: 5538233997001037449, guid: fdd6163d30b004099b4538dc6e239cac, type: 3}
       propertyPath: maxScale.y
