@@ -447,6 +447,10 @@ PrefabInstance:
       propertyPath: cameraAnim
       value: 
       objectReference: {fileID: 1955925136}
+    - target: {fileID: 6042665538538729641, guid: 32633aff2ba85409f9317b6dc0b5e931, type: 3}
+      propertyPath: plusCount
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6319458188591872425, guid: 32633aff2ba85409f9317b6dc0b5e931, type: 3}
       propertyPath: m_Name
       value: Managers
@@ -1470,8 +1474,8 @@ Transform:
   m_GameObject: {fileID: 1620981939}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.1733, y: -1.13, z: 0}
-  m_LocalScale: {x: 2.963763, y: 0.5872, z: 1}
+  m_LocalPosition: {x: -6.7085, y: -1.13, z: 0}
+  m_LocalScale: {x: 3.8934953, y: 0.5872, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 159769066}
