@@ -22,7 +22,7 @@ public class LevelManager : MonoBehaviour
         minus.SetActive(false);
         plus.SetActive(false);
         reset.SetActive(false);
-        yield return new WaitForSeconds(.8f);
+        yield return new WaitForSeconds(1f);
         minus.SetActive(true);
         plus.SetActive(true);
         reset.SetActive(true);

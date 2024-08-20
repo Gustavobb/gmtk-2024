@@ -187,7 +187,7 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Victory
-    clip: {fileID: 8300000, guid: 36d6aa732b2e07b42aeb71ae65cdbe3b, type: 3}
+    clip: {fileID: 8300000, guid: cb58d8da9ed0c86449d74c007c3914b8, type: 3}
     volume: 0.075
     pitch: 1
     loop: 0
