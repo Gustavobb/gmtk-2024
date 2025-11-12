@@ -83,7 +83,7 @@ public class ScalePowerUp : MonoBehaviour
     private IEnumerator WaitToDeactivate()
     {
         isDying = true;
-        rb.velocity = Vector2.zero;
+        rb.linearVelocity = Vector2.zero;
         rb.angularVelocity = 0f;
         hitEffect.SetActive(true);
         SoundManager.instance.Play("Impact");

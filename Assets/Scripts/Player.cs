@@ -37,7 +37,7 @@ public class Player : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, groundDistance, groundMask);
 
         isGrounded = hit.collider != null;
-        _animator.SetFloat("Yspeed", Mathf.Abs(rb.velocity.y));
+        _animator.SetFloat("Yspeed", Mathf.Abs(rb.linearVelocity.y));
 
         if (isGrounded)
         {
@@ -55,9 +55,9 @@ public class Player : MonoBehaviour
             //rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
 
-        if (jumBufferCount >= 0 && coyoteTimeCounter > 0 && rb.velocity.y <= 0)
+        if (jumBufferCount >= 0 && coyoteTimeCounter > 0 && rb.linearVelocity.y <= 0)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             SoundManager.instance.Play("Jump");
             jumBufferCount = 0;
         }
@@ -70,9 +70,9 @@ public class Player : MonoBehaviour
 
         _animator.SetInteger("Speed", Mathf.Abs((int)targetVelocityX));
 
-        float smoothSpeed = Mathf.SmoothDamp(rb.velocity.x, targetVelocityX, ref velocityXSmoothing, isGrounded ? accelerationGrounded : accelerationAirborne);
+        float smoothSpeed = Mathf.SmoothDamp(rb.linearVelocity.x, targetVelocityX, ref velocityXSmoothing, isGrounded ? accelerationGrounded : accelerationAirborne);
 
-        rb.velocity = new Vector2(smoothSpeed, rb.velocity.y);
+        rb.linearVelocity = new Vector2(smoothSpeed, rb.linearVelocity.y);
 
         //rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
     }

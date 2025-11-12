@@ -943,6 +943,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scaleBehaviourX: 0
   scaleBehaviourY: 3
+  rb: {fileID: 0}
   minScale: {x: 0.1, y: 0.1, z: 0.1}
   maxScale: {x: 5, y: 5, z: 5}
   scaleAmount: {x: 0.5, y: 0.5, z: 0.5}
@@ -1009,7 +1010,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.561501, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

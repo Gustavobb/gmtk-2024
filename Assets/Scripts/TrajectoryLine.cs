@@ -7,6 +7,7 @@ public class TrajectoryLine : MonoBehaviour
     [Header("Trajectory")]
     [SerializeField] private int segments = 50;
     [SerializeField] private float curveLength = 3.5f;
+    [SerializeField] private Material lineMaterial;
 
     [Header("References")]
     [SerializeField] private LineRenderer lineRenderer;
@@ -32,6 +33,9 @@ public class TrajectoryLine : MonoBehaviour
             velocity += gravity * timeStep;
         }
 
+        Vector2 normal = (Camera.main.ScreenToWorldPoint(mouseClamped) - startPos).normalized;
+
+        lineMaterial.SetFloat("_lerp", Mathf.Abs(normal.x) + Mathf.Abs(normal.y));
         lineRenderer.SetPositions(points);
     }
 

@@ -830,6 +830,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4203849191862527302, guid: 0b6fa75c9520f4acbaf3c5d774cb42ef, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6361933617041319546, guid: 0b6fa75c9520f4acbaf3c5d774cb42ef, type: 3}
       propertyPath: scalePowerUpManager
       value: 
@@ -984,7 +988,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5538233997001037449, guid: fdd6163d30b004099b4538dc6e239cac, type: 3}
       propertyPath: maxScale.y
-      value: 8
+      value: 1.03173
       objectReference: {fileID: 0}
     - target: {fileID: 5538233997001037449, guid: fdd6163d30b004099b4538dc6e239cac, type: 3}
       propertyPath: minScale.x
@@ -3333,6 +3337,10 @@ MonoBehaviour:
   finalScale: {x: 0.5, y: 0.5, z: 0.5}
   effectTime: 1
   effectDirection: 1
+  disableAfter: 0
+  entered: 0
+  forceReset: 0
+  alreadyreset: 0
 --- !u!1 &837954752
 GameObject:
   m_ObjectHideFlags: 0
@@ -5041,6 +5049,10 @@ MonoBehaviour:
   finalScale: {x: 0.85, y: 0.85, z: 0.85}
   effectTime: 1
   effectDirection: 1
+  disableAfter: 0
+  entered: 0
+  forceReset: 0
+  alreadyreset: 0
 --- !u!4 &1392928626
 Transform:
   m_ObjectHideFlags: 0
@@ -6327,6 +6339,10 @@ MonoBehaviour:
   finalScale: {x: 0.2285765, y: 0.2285765, z: 0.2285765}
   effectTime: 1
   effectDirection: 1
+  disableAfter: 0
+  entered: 0
+  forceReset: 0
+  alreadyreset: 0
 --- !u!4 &2048432980
 Transform:
   m_ObjectHideFlags: 0

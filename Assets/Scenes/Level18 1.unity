@@ -934,7 +934,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9216242852580245366, guid: c182d0918591c224ba261641a93a1899, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.23
+      value: 0.174
       objectReference: {fileID: 0}
     - target: {fileID: 9216242852580245366, guid: c182d0918591c224ba261641a93a1899, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1461,6 +1461,10 @@ MonoBehaviour:
   finalScale: {x: 0.5, y: 0.5, z: 0.5}
   effectTime: 1
   effectDirection: 1
+  disableAfter: 0
+  entered: 0
+  forceReset: 0
+  alreadyreset: 0
 --- !u!1 &837954752
 GameObject:
   m_ObjectHideFlags: 0
