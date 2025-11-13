@@ -19,11 +19,10 @@ public class TrajectoryLine : MonoBehaviour
         lineRenderer.positionCount = segments;
     }
 
-    public void RenderTrajectory(Vector3 startPos, float force, Vector2 gravity)
+    public void RenderTrajectory(Vector3 startPos, Vector3 mousePos, Vector2 gravity, Vector2 maxMag)
     {
         float timeStep = curveLength / segments;
-        Vector2 mouseClamped = new Vector2(Mathf.Clamp(Input.mousePosition.x, 0, Screen.width), Mathf.Clamp(Input.mousePosition.y, 0, Screen.height));
-        Vector2 velocity = (Camera.main.ScreenToWorldPoint(mouseClamped) - startPos).normalized * force;
+        Vector2 velocity = mousePos;
         Vector2 position = startPos;
 
         for (int i = 0; i < segments; i++)
@@ -33,19 +32,26 @@ public class TrajectoryLine : MonoBehaviour
             velocity += gravity * timeStep;
         }
 
-        Vector2 normal = (Camera.main.ScreenToWorldPoint(mouseClamped) - startPos).normalized;
-
-        lineMaterial.SetFloat("_lerp", Mathf.Abs(normal.x) + Mathf.Abs(normal.y));
+        float maxVal = Mathf.Max(Mathf.Abs(mousePos.x) / maxMag.x, Mathf.Abs(mousePos.y) / maxMag.y);
+        lineMaterial.SetFloat("_lerp", maxVal);
         lineRenderer.SetPositions(points);
     }
 
     public void ResetTrajectory()
     {
-        for (int i = 0; i < segments; i++)
+        StartCoroutine(Util.AnimateFloat((float v) =>
         {
-            points[i] = Vector3.zero;
-        }
-
-        lineRenderer.SetPositions(points);
+            lineRenderer.widthMultiplier = v;
+            return 0;
+        }, 1f, 0f, 0.2f, () =>
+        {
+            for (int i = 0; i < segments; i++)
+            {
+                points[i] = Vector3.zero;
+            }
+        
+            lineRenderer.SetPositions(points);
+            lineRenderer.widthMultiplier = 1f;
+        }));
     }
 }
