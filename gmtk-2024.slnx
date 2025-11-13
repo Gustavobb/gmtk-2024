@@ -1,0 +1,6 @@
+﻿<Solution>
+  <Project Path="ScriptBoy.EButtonAttributes.csproj" />
+  <Project Path="ScriptBoy.EButtonTests.csproj" />
+  <Project Path="Assembly-CSharp.csproj" />
+  <Project Path="ScriptBoy.EButtonEditor.csproj" />
+</Solution>
