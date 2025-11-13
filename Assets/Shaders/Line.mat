@@ -54,7 +54,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _lerp: 0.1706347
+    - _lerp: 0.7968997
     m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1
