@@ -8,7 +8,8 @@ public class ScalePowerUp : MonoBehaviour
     public enum PowerUpType
     {
         ScaleUp,
-        ScaleDown
+        ScaleDown,
+        Null
     }
 
     [SerializeField] private PowerUpType powerUpType;

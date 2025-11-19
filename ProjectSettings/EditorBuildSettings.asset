@@ -72,3 +72,4 @@ EditorBuildSettings:
     path: Assets/Scenes/Credits.unity
     guid: 0460c196cbe5f3c43be2c89ed0cd2039
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0

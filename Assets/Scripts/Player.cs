@@ -39,10 +39,7 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-    }
 
-    private void Awake()
-    {
         if (rb == null) rb = GetComponent<Rigidbody2D>();
         if (_animator == null) _animator = GetComponent<Animator>();
 

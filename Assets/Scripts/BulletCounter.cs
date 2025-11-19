@@ -44,6 +44,21 @@ public class BulletCounter : MonoBehaviour
             AdjustMinusWidth(minusCount);
         }
     }
+    
+    public void UseBullet(ScalePowerUp.PowerUpType powerUpType)
+    {
+        switch (powerUpType)
+        {
+            case ScalePowerUp.PowerUpType.ScaleUp:
+                UsePlusBullet();
+                break;
+            case ScalePowerUp.PowerUpType.ScaleDown:
+                UseMinusBullet();
+                break;
+            default:
+                break;
+        }
+    }
 
     public void AddPlusBullets(int numberOfBullets)
     {
@@ -59,6 +74,16 @@ public class BulletCounter : MonoBehaviour
     public bool HasPlusBullet()
     {
         return plusCount > 0;
+    }
+    
+    public bool HasBullet(ScalePowerUp.PowerUpType powerUpType)
+    {
+        return powerUpType switch
+        {
+            ScalePowerUp.PowerUpType.ScaleUp => HasPlusBullet(),
+            ScalePowerUp.PowerUpType.ScaleDown => HasMinusBullet(),
+            _ => false
+        };
     }
 
     public bool HasMinusBullet()

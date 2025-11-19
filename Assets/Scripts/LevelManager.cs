@@ -49,7 +49,7 @@ public class LevelManager : MonoBehaviour
     {
         isPaused = !isPaused;
         pauseContainer.SetActive(isPaused);
-        Time.timeScale = isPaused ? 0f : 1f;
+        // Time.timeScale = isPaused ? 0f : 1f;
     }
 
     public void ResetLevel()
