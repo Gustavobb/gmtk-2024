@@ -6,12 +6,9 @@ public class ScalePowerUpThrower : MonoBehaviour
 {
     [SerializeField] private TrajectoryLine trajectoryLine;
 
-    [Header("Throwing")]
-    public float throwForce = 10f;
-
-    public void PlotTrajectory()
+    public void PlotTrajectory(Vector3 mousePos, Vector2 maxMag)
     {
-        trajectoryLine.RenderTrajectory(transform.position, throwForce, Physics2D.gravity);
+        trajectoryLine.RenderTrajectory(transform.position, mousePos, Physics2D.gravity, maxMag);
     }
 
     public void ResetTrajectory()
@@ -19,7 +16,7 @@ public class ScalePowerUpThrower : MonoBehaviour
         trajectoryLine.ResetTrajectory();
     }
 
-    public void ThrowPowerUp(ScalePowerUp.PowerUpType powerUpType)
+    public void ThrowPowerUp(ScalePowerUp.PowerUpType powerUpType, Vector3 mousePos)
     {
         ScalePowerUp powerUp = ScalePowerUpManager.Instance.RequestScalePowerUp(powerUpType);
         if (powerUp == null) return;
@@ -28,8 +25,7 @@ public class ScalePowerUpThrower : MonoBehaviour
         Vector2 mouseClamped = new Vector2(Mathf.Clamp(Input.mousePosition.x, 0, Screen.width), Mathf.Clamp(Input.mousePosition.y, 0, Screen.height));
 
         powerUp.transform.position = transform.position;
-        Vector2 direction = (Camera.main.ScreenToWorldPoint(mouseClamped) - transform.position).normalized;
-        powerUp.rb.AddForce(direction * throwForce, ForceMode2D.Impulse);
+        powerUp.rb.AddForce(mousePos, ForceMode2D.Impulse);
         powerUp.rb.angularVelocity = 1000f;
         SoundManager.instance.Play("Shoot");
     }

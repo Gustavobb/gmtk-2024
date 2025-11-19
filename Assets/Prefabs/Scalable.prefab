@@ -50,6 +50,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -98,9 +101,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scalable: {fileID: 5538233997001037449}
-  arrowScale: 0.05
+  arrowScaleXYZ: 0.08
   isInside: 0
-  spriteRenderer: {fileID: 5128579003531010974}
   arrowType: 2
 --- !u!1 &1013841288342123044
 GameObject:
@@ -187,6 +189,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -235,9 +240,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scalable: {fileID: 5538233997001037449}
-  arrowScale: 0.05
+  arrowScaleXYZ: 0.08
   isInside: 0
-  spriteRenderer: {fileID: 944860536859393897}
   arrowType: 0
 --- !u!1 &2131026388597130318
 GameObject:
@@ -324,6 +328,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -372,9 +379,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scalable: {fileID: 5538233997001037449}
-  arrowScale: 0.05
+  arrowScaleXYZ: 0.08
   isInside: 1
-  spriteRenderer: {fileID: 825160397387110342}
   arrowType: 2
 --- !u!1 &3078324833577732278
 GameObject:
@@ -426,6 +432,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -474,9 +483,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scalable: {fileID: 5538233997001037449}
-  arrowScale: 0.05
+  arrowScaleXYZ: 0.08
   isInside: 1
-  spriteRenderer: {fileID: 232540710075986402}
   arrowType: 1
 --- !u!1 &5551630997399294980
 GameObject:
@@ -528,6 +536,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -576,9 +587,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scalable: {fileID: 5538233997001037449}
-  arrowScale: 0.05
+  arrowScaleXYZ: 0.08
   isInside: 1
-  spriteRenderer: {fileID: 5782463136177170914}
   arrowType: 0
 --- !u!1 &6268267829282402862
 GameObject:
@@ -633,6 +643,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -682,6 +695,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scaleBehaviourX: 0
   scaleBehaviourY: 3
+  rb: {fileID: 0}
   minScale: {x: 0.1, y: 0.1, z: 0.1}
   maxScale: {x: 5, y: 5, z: 5}
   scaleAmount: {x: 0.5, y: 0.5, z: 0.5}
@@ -714,6 +728,7 @@ BoxCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6268267829282402862}
   m_Enabled: 1
+  serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -737,7 +752,8 @@ BoxCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -748,7 +764,6 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &6600761381996809965
@@ -801,6 +816,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -849,9 +867,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scalable: {fileID: 5538233997001037449}
-  arrowScale: 0.05
+  arrowScaleXYZ: 0.08
   isInside: 0
-  spriteRenderer: {fileID: 4250616915520939524}
   arrowType: 1
 --- !u!1 &8150908798024561250
 GameObject:
@@ -903,6 +920,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -951,9 +971,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scalable: {fileID: 5538233997001037449}
-  arrowScale: 0.05
+  arrowScaleXYZ: 0.08
   isInside: 1
-  spriteRenderer: {fileID: 1959836237805306506}
   arrowType: 3
 --- !u!1 &8152492753675474661
 GameObject:
@@ -1005,6 +1024,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1053,7 +1075,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scalable: {fileID: 5538233997001037449}
-  arrowScale: 0.05
+  arrowScaleXYZ: 0.08
   isInside: 0
-  spriteRenderer: {fileID: 3750481295892342852}
   arrowType: 3

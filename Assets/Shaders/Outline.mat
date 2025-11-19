@@ -28,6 +28,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 798d51aea84374996842c41691def44f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_8fbca7b260424be0b898a0ba8cc287ab_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 95197d1415ce049b89752485f95f3f9e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_c61f93af071547c7a7b53a2476fdf514_Texture_1_Texture2D:
         m_Texture: {fileID: 2800000, guid: 99873d833e72449d896e439704f9a290, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -48,10 +52,15 @@ Material:
     m_Floats:
     - _ColorThreshold: 0.1
     - _Fade: 0
+    - _NoiseDivide: 100
+    - _NoiseSpeed: 3
     - _NormalThreshold: 0.1
     - _OVERLAY: 1
+    - _OutlinePow: 0.01
+    - _PixelSize: 1920
     m_Colors:
-    - _LineWidth: {r: 2, g: 2, b: 0, a: 0}
+    - _LineWidth: {r: 3, g: 3, b: 0, a: 0}
+    - _NoiseTiling: {r: 2, g: 2, b: 0, a: 0}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

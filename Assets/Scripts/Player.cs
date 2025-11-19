@@ -33,6 +33,13 @@ public class Player : MonoBehaviour
     private float velocityXSmoothing;
     private float jumpBufferCount;
     private float coyoteTimeCounter;
+    
+    public static Player Instance;
+    
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void Awake()
     {
