@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+
 
 public class Player : MonoBehaviour
 {
@@ -24,10 +26,12 @@ public class Player : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
 
     [SerializeField] private Animator _animator;
+
+    private PlayerInputActions input;
     private bool isGrounded;
     private float horizontalInput;
     private float velocityXSmoothing;
-    private float jumBufferCount;
+    private float jumpBufferCount;
     private float coyoteTimeCounter;
     
     public static Player Instance;
@@ -37,10 +41,36 @@ public class Player : MonoBehaviour
         Instance = this;
     }
 
+    private void Awake()
+    {
+        if (rb == null) rb = GetComponent<Rigidbody2D>();
+        if (_animator == null) _animator = GetComponent<Animator>();
+
+        input = new PlayerInputActions();
+    }
+
+    private void OnEnable()
+    {
+        input.Enable();
+
+        input.Player.Jump.performed += OnJumpPerformed;
+    }
+
+    private void OnDisable()
+    {
+        input.Player.Jump.performed -= OnJumpPerformed;
+        input.Disable();
+    }
+
+    private void OnJumpPerformed(InputAction.CallbackContext ctx)
+    {
+        jumpBufferCount = jumpBufferLength;
+    }
+
     private void Update()
     {
-        jumBufferCount -= Time.deltaTime;
-        horizontalInput = Input.GetAxis("Horizontal");
+        jumpBufferCount -= Time.deltaTime;
+        horizontalInput = input.Player.Move.ReadValue<float>();
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, groundDistance, groundMask);
 
         isGrounded = hit.collider != null;
@@ -55,18 +85,11 @@ public class Player : MonoBehaviour
             coyoteTimeCounter -= Time.deltaTime;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            jumBufferCount = jumpBufferLength;
-            
-            //rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-        }
-
-        if (jumBufferCount >= 0 && coyoteTimeCounter > 0 && rb.linearVelocity.y <= 0)
+        if (jumpBufferCount >= 0 && coyoteTimeCounter > 0 && rb.linearVelocity.y <= 0)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             SoundManager.instance.Play("Jump");
-            jumBufferCount = 0;
+            jumpBufferCount = 0;
         }
     }
 
