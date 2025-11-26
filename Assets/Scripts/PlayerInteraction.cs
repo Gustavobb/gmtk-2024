@@ -44,16 +44,16 @@ public class PlayerInteraction : MonoBehaviour
     {
         input = new PlayerInputActions();
         input.Enable();
-        isKeyboardAndMouse = obj.currentControlScheme == "Keyboard&Mouse";
+        isKeyboardAndMouse = obj.currentControlScheme == "keyboard&mouse";
         print("Is Keyboard and Mouse: " + isKeyboardAndMouse + " | Current Control Scheme: " + obj.currentControlScheme);
         
-        // if (isKeyboardAndMouse)
-        // {
+        if (isKeyboardAndMouse)
+        {
             input.Player.ShootPlus.performed += ctx => StartThrowAction(ScalePowerUp.PowerUpType.ScaleUp);
             input.Player.ShootMinus.performed += ctx => StartThrowAction(ScalePowerUp.PowerUpType.ScaleDown);
             input.Player.ShootPlus.canceled += ctx => ThrowAction(ScalePowerUp.PowerUpType.ScaleUp);
             input.Player.ShootMinus.canceled += ctx => ThrowAction(ScalePowerUp.PowerUpType.ScaleDown);
-        // }
+        }
     }
     
     private void Update()
@@ -87,6 +87,7 @@ public class PlayerInteraction : MonoBehaviour
             Mathf.Clamp(mousePosition.x, -maxThrowForce.x, maxThrowForce.x),
             Mathf.Clamp(mousePosition.y, -maxThrowForce.y, maxThrowForce.y),
             mousePosition.z);
+        print("Mouse Position: " + mousePosition);
         scalePowerUpThrower.PlotTrajectory(mousePosition, maxThrowForce);
     }
     
