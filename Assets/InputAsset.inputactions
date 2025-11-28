@@ -61,6 +61,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Reset",
+                    "type": "Button",
+                    "id": "165b87f3-8467-417f-9f14-9a55453e3aa2",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Aim",
                     "type": "Value",
                     "id": "001edd02-8cde-431e-bbb7-cf71e2aeee7d",
@@ -206,7 +215,7 @@
                 {
                     "name": "",
                     "id": "43a8cd8c-8be5-4859-ba5f-8e8fbbd093cf",
-                    "path": "<Gamepad>/rightShoulder",
+                    "path": "<Gamepad>/leftTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -217,7 +226,7 @@
                 {
                     "name": "",
                     "id": "08e4e4b3-c2d9-47ef-86f2-70d734bdb981",
-                    "path": "<Keyboard>/x",
+                    "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -228,7 +237,7 @@
                 {
                     "name": "",
                     "id": "f7804d65-765d-40f2-a251-69a353104365",
-                    "path": "<Gamepad>/leftTrigger",
+                    "path": "<Gamepad>/leftShoulder",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -239,7 +248,7 @@
                 {
                     "name": "",
                     "id": "f7d44285-54e4-4774-a3e1-850dd27e8ca1",
-                    "path": "<Gamepad>/leftShoulder",
+                    "path": "<Gamepad>/rightShoulder",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -332,6 +341,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "79935267-6214-437c-b1ba-78722bac8884",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Reset",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a5cac012-eb42-46ed-8ec2-cc32a133125d",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Reset",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
+
 
 
 public class LevelManager : MonoBehaviour
@@ -13,11 +15,22 @@ public class LevelManager : MonoBehaviour
     public static LevelManager Instance;
     private bool isPaused = false;
 
+    private PlayerInputActions input;
+
+
     private void Awake()
     {
         Instance = this;
         cameraAnim = Camera.main.GetComponent<Animator>();
         StartCoroutine(nameof(ActivateUI));
+
+    }
+    private void OnEnable()
+    {
+        input = new PlayerInputActions();
+        input.Enable();
+        input.Player.Pause.performed += PauseGame;
+        input.Player.Reset.performed += ResetLevel;
     }
 
     private IEnumerator ActivateUI()
@@ -31,28 +44,14 @@ public class LevelManager : MonoBehaviour
         reset.SetActive(true);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            ResetLevel();
-        }
-
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            PauseGame();
-        }
-    }
-
-    private void PauseGame()
+    private void PauseGame(InputAction.CallbackContext ctx)
     {
         isPaused = !isPaused;
         pauseContainer.SetActive(isPaused);
         // Time.timeScale = isPaused ? 0f : 1f;
     }
 
-    public void ResetLevel()
+    public void ResetLevel(InputAction.CallbackContext ctx)
     {
         StartCoroutine(nameof(ResetLevelCoroutine));
     }
@@ -101,12 +100,12 @@ public class LevelManager : MonoBehaviour
 
     public void ResumeButton()
     {
-        PauseGame();
+        PauseGame(new InputAction.CallbackContext());
     }
 
     public void MenuButton()
     {
-        PauseGame();
+        PauseGame(new InputAction.CallbackContext());
         StartCoroutine(nameof(LoadMenu));
     }
 }
