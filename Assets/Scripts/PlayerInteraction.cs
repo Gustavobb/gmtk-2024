@@ -74,7 +74,6 @@ public class PlayerInteraction : MonoBehaviour
         currentPowerUpType = powerUpType;
         float dot = Vector3.Dot(-transform.right, (transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition)).normalized);
         float distance = Vector3.Distance(transform.position, Camera.main.ScreenToWorldPoint(Input.mousePosition));
-        print(distance);
         mousePosition = dot < 0 ? new Vector3(-1, 1, 0) * distance : new Vector3(1, 1, 0) * distance;
     }
 
@@ -87,7 +86,6 @@ public class PlayerInteraction : MonoBehaviour
             Mathf.Clamp(mousePosition.x, -maxThrowForce.x, maxThrowForce.x),
             Mathf.Clamp(mousePosition.y, -maxThrowForce.y, maxThrowForce.y),
             mousePosition.z);
-        print("Mouse Position: " + mousePosition);
         scalePowerUpThrower.PlotTrajectory(mousePosition, maxThrowForce);
     }
     
