@@ -49,7 +49,6 @@ public class Player : MonoBehaviour
     private void OnEnable()
     {
         input.Enable();
-
         input.Player.Jump.performed += OnJumpPerformed;
     }
 
