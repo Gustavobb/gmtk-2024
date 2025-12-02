@@ -21,7 +21,7 @@ public class FM : MonoBehaviour
 
     public void SaveData()
     {
-        int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
+        int currentLevelIndex = SceneManager.GetActiveScene().buildIndex - 1;
         if (currentLevelIndex <= level) return;
         level = currentLevelIndex;
         SaveSystem.Save(this);
