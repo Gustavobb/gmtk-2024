@@ -233,6 +233,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3694937489159080357, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
   m_PrefabInstance: {fileID: 35839654}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &35839656 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5209807542929968118, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
+  m_PrefabInstance: {fileID: 35839654}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3670e89eb7adf914d93d66ccdb107477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelSelectButton
 --- !u!1001 &209884174
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -347,6 +358,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3694937489159080357, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
   m_PrefabInstance: {fileID: 209884174}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &209884176 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5209807542929968118, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
+  m_PrefabInstance: {fileID: 209884174}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3670e89eb7adf914d93d66ccdb107477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelSelectButton
 --- !u!1001 &324942643
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -461,6 +483,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3694937489159080357, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
   m_PrefabInstance: {fileID: 324942643}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &324942645 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5209807542929968118, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
+  m_PrefabInstance: {fileID: 324942643}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3670e89eb7adf914d93d66ccdb107477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelSelectButton
 --- !u!1001 &480049740
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -575,6 +608,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3694937489159080357, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
   m_PrefabInstance: {fileID: 480049740}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &480049742 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5209807542929968118, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
+  m_PrefabInstance: {fileID: 480049740}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3670e89eb7adf914d93d66ccdb107477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelSelectButton
 --- !u!1001 &487811380
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -689,6 +733,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3694937489159080357, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
   m_PrefabInstance: {fileID: 487811380}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &487811382 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5209807542929968118, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
+  m_PrefabInstance: {fileID: 487811380}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3670e89eb7adf914d93d66ccdb107477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelSelectButton
 --- !u!1001 &511152593
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -803,6 +858,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3694937489159080357, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
   m_PrefabInstance: {fileID: 511152593}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &511152595 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5209807542929968118, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
+  m_PrefabInstance: {fileID: 511152593}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3670e89eb7adf914d93d66ccdb107477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelSelectButton
 --- !u!1001 &514903496
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -917,6 +983,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3694937489159080357, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
   m_PrefabInstance: {fileID: 514903496}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &514903498 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5209807542929968118, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
+  m_PrefabInstance: {fileID: 514903496}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3670e89eb7adf914d93d66ccdb107477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelSelectButton
 --- !u!1001 &536618909
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1031,6 +1108,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3694937489159080357, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
   m_PrefabInstance: {fileID: 536618909}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &536618911 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5209807542929968118, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
+  m_PrefabInstance: {fileID: 536618909}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3670e89eb7adf914d93d66ccdb107477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelSelectButton
 --- !u!1001 &590630674
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1145,6 +1233,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3694937489159080357, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
   m_PrefabInstance: {fileID: 590630674}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &590630676 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5209807542929968118, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
+  m_PrefabInstance: {fileID: 590630674}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3670e89eb7adf914d93d66ccdb107477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelSelectButton
 --- !u!1 &601990662
 GameObject:
   m_ObjectHideFlags: 0
@@ -1180,7 +1279,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -75}
-  m_SizeDelta: {x: 0, y: 50}
+  m_SizeDelta: {x: 0, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &601990664
 MonoBehaviour:
@@ -1204,15 +1303,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: LEVEL SELECT
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 585fde9409dc5ac4eb21d404ff259601, type: 2}
+  m_sharedMaterial: {fileID: -6515091280815512169, guid: 585fde9409dc5ac4eb21d404ff259601, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294942581
-  m_fontColor: {r: 0.45882353, g: 0.62352943, b: 1, a: 1}
+  m_fontColor: {r: 0.45882356, g: 0.62352943, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1229,10 +1328,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 53.85
+  m_fontSizeBase: 42.26
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -1479,6 +1578,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3694937489159080357, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
   m_PrefabInstance: {fileID: 672218895}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &672218897 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5209807542929968118, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
+  m_PrefabInstance: {fileID: 672218895}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3670e89eb7adf914d93d66ccdb107477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelSelectButton
 --- !u!224 &768086830 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3694937489159080357, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
@@ -1598,6 +1708,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3694937489159080357, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
   m_PrefabInstance: {fileID: 768224214}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &768224216 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5209807542929968118, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
+  m_PrefabInstance: {fileID: 768224214}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3670e89eb7adf914d93d66ccdb107477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelSelectButton
 --- !u!1001 &776429164
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1769,6 +1890,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3694937489159080357, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
   m_PrefabInstance: {fileID: 802005560}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &802005562 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5209807542929968118, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
+  m_PrefabInstance: {fileID: 802005560}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3670e89eb7adf914d93d66ccdb107477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelSelectButton
 --- !u!1001 &930574908
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1883,6 +2015,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3694937489159080357, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
   m_PrefabInstance: {fileID: 930574908}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &930574910 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5209807542929968118, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
+  m_PrefabInstance: {fileID: 930574908}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3670e89eb7adf914d93d66ccdb107477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelSelectButton
 --- !u!1 &974034048
 GameObject:
   m_ObjectHideFlags: 0
@@ -2065,6 +2208,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3694937489159080357, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
   m_PrefabInstance: {fileID: 1001233594}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1001233596 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5209807542929968118, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
+  m_PrefabInstance: {fileID: 1001233594}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3670e89eb7adf914d93d66ccdb107477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelSelectButton
 --- !u!1001 &1027684832
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2179,6 +2333,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3694937489159080357, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
   m_PrefabInstance: {fileID: 1027684832}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1027684834 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5209807542929968118, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
+  m_PrefabInstance: {fileID: 1027684832}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3670e89eb7adf914d93d66ccdb107477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelSelectButton
 --- !u!1001 &1040973139
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2293,6 +2458,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3694937489159080357, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
   m_PrefabInstance: {fileID: 1040973139}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1040973141 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5209807542929968118, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
+  m_PrefabInstance: {fileID: 1040973139}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3670e89eb7adf914d93d66ccdb107477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelSelectButton
 --- !u!1001 &1158911133
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2407,6 +2583,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3694937489159080357, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
   m_PrefabInstance: {fileID: 1158911133}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1158911135 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5209807542929968118, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
+  m_PrefabInstance: {fileID: 1158911133}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3670e89eb7adf914d93d66ccdb107477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelSelectButton
 --- !u!1001 &1182071454
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2521,6 +2708,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3694937489159080357, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
   m_PrefabInstance: {fileID: 1182071454}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1182071456 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5209807542929968118, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
+  m_PrefabInstance: {fileID: 1182071454}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3670e89eb7adf914d93d66ccdb107477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelSelectButton
 --- !u!1001 &1185231097
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2635,6 +2833,153 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3694937489159080357, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
   m_PrefabInstance: {fileID: 1185231097}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1185231099 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5209807542929968118, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
+  m_PrefabInstance: {fileID: 1185231097}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3670e89eb7adf914d93d66ccdb107477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelSelectButton
+--- !u!1 &1290203024
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1290203025}
+  - component: {fileID: 1290203027}
+  - component: {fileID: 1290203026}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1290203025
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290203024}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1460316624}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1290203026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290203024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: BACK
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 585fde9409dc5ac4eb21d404ff259601, type: 2}
+  m_sharedMaterial: {fileID: -6515091280815512169, guid: 585fde9409dc5ac4eb21d404ff259601, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4291151301
+  m_fontColor: {r: 0.77254903, g: 0.77254903, b: 0.77254903, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 35.9
+  m_fontSizeBase: 45
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 5.6
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1290203027
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290203024}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1390948645
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2749,6 +3094,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3694937489159080357, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
   m_PrefabInstance: {fileID: 1390948645}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1390948647 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5209807542929968118, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
+  m_PrefabInstance: {fileID: 1390948645}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3670e89eb7adf914d93d66ccdb107477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelSelectButton
 --- !u!1001 &1394976908
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2863,6 +3219,173 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3694937489159080357, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
   m_PrefabInstance: {fileID: 1394976908}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1394976910 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5209807542929968118, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
+  m_PrefabInstance: {fileID: 1394976908}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3670e89eb7adf914d93d66ccdb107477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelSelectButton
+--- !u!1 &1460316623
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1460316624}
+  - component: {fileID: 1460316628}
+  - component: {fileID: 1460316627}
+  - component: {fileID: 1460316626}
+  - component: {fileID: 1460316625}
+  m_Layer: 5
+  m_Name: BackButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1460316624
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460316623}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1290203025}
+  m_Father: {fileID: 1839995893}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 50}
+  m_SizeDelta: {x: 125, y: 40}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &1460316625
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460316623}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 60232ca642f8c66469ea37b548a374e7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1460316626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460316623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.84705883, b: 0, a: 1}
+    m_PressedColor: {r: 1, g: 0.84705883, b: 0, a: 1}
+    m_SelectedColor: {r: 1, g: 0.84705883, b: 0, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1290203026}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2117843170}
+        m_TargetAssemblyTypeName: LevelSelectManager, Assembly-CSharp
+        m_MethodName: BackButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1460316627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460316623}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.43137258, g: 0.91372555, b: 0.5254902, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1460316628
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460316623}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1565904762
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2977,6 +3500,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3694937489159080357, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
   m_PrefabInstance: {fileID: 1565904762}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1565904764 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5209807542929968118, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
+  m_PrefabInstance: {fileID: 1565904762}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3670e89eb7adf914d93d66ccdb107477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelSelectButton
 --- !u!1001 &1577213910
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3091,6 +3625,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3694937489159080357, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
   m_PrefabInstance: {fileID: 1577213910}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1577213912 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5209807542929968118, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
+  m_PrefabInstance: {fileID: 1577213910}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3670e89eb7adf914d93d66ccdb107477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelSelectButton
 --- !u!1001 &1652768923
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3205,6 +3750,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3694937489159080357, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
   m_PrefabInstance: {fileID: 1652768923}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1652768925 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5209807542929968118, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
+  m_PrefabInstance: {fileID: 1652768923}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3670e89eb7adf914d93d66ccdb107477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelSelectButton
 --- !u!1 &1839995889
 GameObject:
   m_ObjectHideFlags: 0
@@ -3301,6 +3857,7 @@ RectTransform:
   m_Children:
   - {fileID: 601990663}
   - {fileID: 2117843168}
+  - {fileID: 1460316624}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3479,6 +4036,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3694937489159080357, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
   m_PrefabInstance: {fileID: 1903240439}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1903240441 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5209807542929968118, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
+  m_PrefabInstance: {fileID: 1903240439}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3670e89eb7adf914d93d66ccdb107477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelSelectButton
 --- !u!1001 &1904210412
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3593,6 +4161,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3694937489159080357, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
   m_PrefabInstance: {fileID: 1904210412}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1904210414 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5209807542929968118, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
+  m_PrefabInstance: {fileID: 1904210412}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3670e89eb7adf914d93d66ccdb107477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelSelectButton
 --- !u!1001 &1923063796
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3707,6 +4286,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3694937489159080357, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
   m_PrefabInstance: {fileID: 1923063796}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1923063798 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5209807542929968118, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
+  m_PrefabInstance: {fileID: 1923063796}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3670e89eb7adf914d93d66ccdb107477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelSelectButton
 --- !u!1001 &1927200110
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3821,6 +4411,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3694937489159080357, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
   m_PrefabInstance: {fileID: 1927200110}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1927200112 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5209807542929968118, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
+  m_PrefabInstance: {fileID: 1927200110}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3670e89eb7adf914d93d66ccdb107477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelSelectButton
 --- !u!1 &2117843167
 GameObject:
   m_ObjectHideFlags: 0
@@ -3831,8 +4432,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2117843168}
   - component: {fileID: 2117843169}
+  - component: {fileID: 2117843170}
   m_Layer: 5
-  m_Name: LevelButtons
+  m_Name: LevelSelect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3903,7 +4505,7 @@ MonoBehaviour:
     m_Left: 30
     m_Right: 30
     m_Top: 100
-    m_Bottom: 50
+    m_Bottom: 75
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
@@ -3911,6 +4513,49 @@ MonoBehaviour:
   m_Spacing: {x: 30, y: 40}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!114 &2117843170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2117843167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edf50fd9866a0624bbffc42d35399aec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelSelectManager
+  levelButtons:
+  - {fileID: 4307976435918737453}
+  - {fileID: 487811382}
+  - {fileID: 1927200112}
+  - {fileID: 324942645}
+  - {fileID: 1923063798}
+  - {fileID: 1185231099}
+  - {fileID: 1040973141}
+  - {fileID: 1182071456}
+  - {fileID: 1027684834}
+  - {fileID: 1903240441}
+  - {fileID: 1652768925}
+  - {fileID: 480049742}
+  - {fileID: 1577213912}
+  - {fileID: 1390948647}
+  - {fileID: 1394976910}
+  - {fileID: 802005562}
+  - {fileID: 930574910}
+  - {fileID: 590630676}
+  - {fileID: 768224216}
+  - {fileID: 209884176}
+  - {fileID: 35839656}
+  - {fileID: 1904210414}
+  - {fileID: 672218897}
+  - {fileID: 2131637274}
+  - {fileID: 1565904764}
+  - {fileID: 1158911135}
+  - {fileID: 1001233596}
+  - {fileID: 511152595}
+  - {fileID: 514903498}
+  - {fileID: 536618911}
 --- !u!1001 &2131637272
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4025,6 +4670,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3694937489159080357, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
   m_PrefabInstance: {fileID: 2131637272}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2131637274 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5209807542929968118, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
+  m_PrefabInstance: {fileID: 2131637272}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3670e89eb7adf914d93d66ccdb107477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelSelectButton
 --- !u!1 &2190473274635652813
 GameObject:
   m_ObjectHideFlags: 0
@@ -4140,11 +4796,26 @@ PrefabInstance:
       propertyPath: level
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5791206230754456163, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
+      propertyPath: m_Transition
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
+--- !u!114 &4307976435918737453 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5209807542929968118, guid: 28f33aa2e8b30fb4d8e36ff022d90c8a, type: 3}
+  m_PrefabInstance: {fileID: 4307976435918737452}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3670e89eb7adf914d93d66ccdb107477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelSelectButton
 --- !u!20 &4868729033703387142
 Camera:
   m_ObjectHideFlags: 0

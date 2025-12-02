@@ -10,6 +10,7 @@ public class LevelManager : MonoBehaviour
 {
     [SerializeField] private GameObject plus, minus, reset;
     [SerializeField] private GameObject pauseContainer;
+    private FM FM;
 
     public static LevelManager Instance;
     private bool isPaused = false;
@@ -18,9 +19,11 @@ public class LevelManager : MonoBehaviour
     private PlayerInputActions input;
 
 
+
     private void Awake()
     {
         Instance = this;
+
         StartCoroutine(Util.AnimateFloat((float val) =>
         {
             fadeMaterial.SetFloat("_Fade", val);
@@ -34,10 +37,12 @@ public class LevelManager : MonoBehaviour
     }
     private void OnEnable()
     {
+        FM = FindFirstObjectByType<FM>();
         input = new PlayerInputActions();
         input.Enable();
         input.Player.Pause.performed += PauseGame;
         input.Player.Reset.performed += ResetLevel;
+
     }
 
     private void PauseGame(InputAction.CallbackContext ctx)
@@ -75,6 +80,8 @@ public class LevelManager : MonoBehaviour
         }
         else
         {
+
+            FM.SaveData();
             StartCoroutine(Util.AnimateFloat((float val) =>
             {
                 fadeMaterial.SetFloat("_Fade", val);
