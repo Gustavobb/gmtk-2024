@@ -19,6 +19,7 @@ public class ScalePowerUp : MonoBehaviour
     public Rigidbody2D rb;
     public ScalePowerUpManager scalePowerUpManager;
 
+    public float OriginalScale;
     private const string SCALABLE_TAG = "Scalable";
     private const string CONNECTOR_TAG = "Connector";
     private const string POWER_UP_BOUNCER_TAG = "PowerUpBouncer";
@@ -33,6 +34,8 @@ public class ScalePowerUp : MonoBehaviour
     {
         isDying = false;
         sprites.SetActive(true);
+        transform.localScale = Vector3.one * OriginalScale * Player.Instance.scaleMult;
+        rb.gravityScale = Player.Instance.Rb.gravityScale;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -41,7 +44,16 @@ public class ScalePowerUp : MonoBehaviour
 
         if (collision.gameObject.CompareTag(POWER_UP_BOUNCER_TAG))
         {
-            rb.AddForce(collision.GetContact(0).normal * 10f, ForceMode2D.Impulse);
+            Vector2 avgNormal = Vector3.zero;
+            
+            for (int i = 0; i < collision.contactCount; i++)
+            {
+                avgNormal += collision.GetContact(i).normal;
+            }
+            
+            avgNormal /= collision.contactCount;
+            
+            rb.AddForce(avgNormal * 10f, ForceMode2D.Impulse);
             SoundManager.instance.Play("Bouncer");
             return;
         }

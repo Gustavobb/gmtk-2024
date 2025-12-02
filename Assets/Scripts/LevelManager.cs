@@ -11,9 +11,9 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private GameObject plus, minus, reset;
     [SerializeField] private GameObject pauseContainer;
 
-    private Animator cameraAnim;
     public static LevelManager Instance;
     private bool isPaused = false;
+    public Material fadeMaterial;
 
     private PlayerInputActions input;
 
@@ -21,9 +21,16 @@ public class LevelManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        cameraAnim = Camera.main.GetComponent<Animator>();
-        StartCoroutine(nameof(ActivateUI));
-
+        StartCoroutine(Util.AnimateFloat((float val) =>
+        {
+            fadeMaterial.SetFloat("_Fade", val);
+            return 0;
+        }, 1f, 0f, 1f, () =>
+        {
+            minus.SetActive(true);
+            plus.SetActive(true);
+            reset.SetActive(true);
+        }));
     }
     private void OnEnable()
     {
@@ -31,17 +38,6 @@ public class LevelManager : MonoBehaviour
         input.Enable();
         input.Player.Pause.performed += PauseGame;
         input.Player.Reset.performed += ResetLevel;
-    }
-
-    private IEnumerator ActivateUI()
-    {
-        minus.SetActive(false);
-        plus.SetActive(false);
-        reset.SetActive(false);
-        yield return new WaitForSeconds(1f);
-        minus.SetActive(true);
-        plus.SetActive(true);
-        reset.SetActive(true);
     }
 
     private void PauseGame(InputAction.CallbackContext ctx)
@@ -53,49 +49,41 @@ public class LevelManager : MonoBehaviour
 
     public void ResetLevel(InputAction.CallbackContext ctx)
     {
-        StartCoroutine(nameof(ResetLevelCoroutine));
-    }
-
-    private IEnumerator ResetLevelCoroutine()
-    {
-        minus.SetActive(false);
-        plus.SetActive(false);
-        reset.SetActive(false);
         SoundManager.instance.Play("Reset");
-        yield return new WaitForSeconds(.1f);
-        cameraAnim.SetTrigger("ZoomReset");
-        yield return new WaitForSeconds(.8f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        StartCoroutine(Util.AnimateFloat((float val) =>
+        {
+            fadeMaterial.SetFloat("_Fade", val);
+            return 0;
+        }, 0f, 1f, 1f, () =>
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }));
     }
 
     public void LoadNextLevel()
     {
         if (SceneManager.GetActiveScene().name == "Credits")
-            StartCoroutine(nameof(LoadMenu));
+        {
+            StartCoroutine(Util.AnimateFloat((float val) =>
+            {
+                fadeMaterial.SetFloat("_Fade", val);
+                return 0;
+            }, 0f, 1f, 1f, () =>
+            {
+                SceneManager.LoadScene("Menu");
+            }));
+        }
         else
-            StartCoroutine(nameof(LoadNextLevelCoroutine));
-    }
-
-    private IEnumerator LoadNextLevelCoroutine()
-    {
-        minus.SetActive(false);
-        plus.SetActive(false);
-        reset.SetActive(false);
-        yield return new WaitForSeconds(.1f);
-        cameraAnim.SetTrigger("ZoomOut");
-        yield return new WaitForSeconds(1.3f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
-
-    private IEnumerator LoadMenu()
-    {
-        minus.SetActive(false);
-        plus.SetActive(false);
-        reset.SetActive(false);
-        yield return new WaitForSeconds(.1f);
-        cameraAnim.SetTrigger("ZoomOut");
-        yield return new WaitForSeconds(1.3f);
-        SceneManager.LoadScene("Menu");
+        {
+            StartCoroutine(Util.AnimateFloat((float val) =>
+            {
+                fadeMaterial.SetFloat("_Fade", val);
+                return 0;
+            }, 0f, 1f, 1f, () =>
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }));
+        }
     }
 
     public void ResumeButton()
@@ -106,6 +94,13 @@ public class LevelManager : MonoBehaviour
     public void MenuButton()
     {
         PauseGame(new InputAction.CallbackContext());
-        StartCoroutine(nameof(LoadMenu));
+        StartCoroutine(Util.AnimateFloat((float val) =>
+        {
+            fadeMaterial.SetFloat("_Fade", val);
+            return 0;
+        }, 0f, 1f, 1f, () =>
+        {
+            SceneManager.LoadScene("Menu");
+        }));
     }
 }

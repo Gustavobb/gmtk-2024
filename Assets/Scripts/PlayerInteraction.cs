@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Debug = System.Diagnostics.Debug;
@@ -17,7 +18,6 @@ public class PlayerInteraction : MonoBehaviour
     [Header("References")]
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private ScalePowerUpThrower scalePowerUpThrower;
-    public static bool isScaling = false;
 
     private ScalePowerUp.PowerUpType currentPowerUpType = ScalePowerUp.PowerUpType.Null;
     private CustomStopwatch throwCooldown = new CustomStopwatch();
@@ -25,6 +25,7 @@ public class PlayerInteraction : MonoBehaviour
     private PlayerInputActions input;
     public PlayerInput pInput;
     private bool isKeyboardAndMouse;
+    private CustomStopwatch startDelay = new CustomStopwatch();
 
     private void Awake()
     {
@@ -44,6 +45,7 @@ public class PlayerInteraction : MonoBehaviour
     {
         input = new PlayerInputActions();
         input.Enable();
+        startDelay.Restart();
         input.Player.ShootPlus.performed += ctx => StartThrowAction(ScalePowerUp.PowerUpType.ScaleUp);
         input.Player.ShootMinus.performed += ctx => StartThrowAction(ScalePowerUp.PowerUpType.ScaleDown);
         input.Player.CancelShot.canceled += ctx => StartThrowAction(ScalePowerUp.PowerUpType.Null);
@@ -57,7 +59,7 @@ public class PlayerInteraction : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, groundDistance, groundMask);
         groundedOn = hit.collider?.gameObject;
         isKeyboardAndMouse = pInput.currentControlScheme == "keyboard&mouse";
-        deltaAnalog = isKeyboardAndMouse ? Input.mousePositionDelta*mousePosMultiplier : input.Player.Aim.ReadValue<Vector2>()*analogPosMultiplier;
+        deltaAnalog = isKeyboardAndMouse ? Player.Instance.scaleMult * Input.mousePositionDelta * mousePosMultiplier : Player.Instance.scaleMult * input.Player.Aim.ReadValue<Vector2>() * analogPosMultiplier;
         if (throwCooldown.ElapsedTimeSec() < 0.2f)
         {
             return;
@@ -68,7 +70,9 @@ public class PlayerInteraction : MonoBehaviour
 
     private void StartThrowAction(ScalePowerUp.PowerUpType powerUpType)
     {
-        if(currentPowerUpType != ScalePowerUp.PowerUpType.Null){
+        if (startDelay.ElapsedTimeSec() < 1f) return;
+        if(currentPowerUpType != ScalePowerUp.PowerUpType.Null)
+        {
             scalePowerUpThrower.ResetTrajectory();
             throwCooldown.Restart();
             currentPowerUpType = ScalePowerUp.PowerUpType.Null;
@@ -87,11 +91,12 @@ public class PlayerInteraction : MonoBehaviour
         if (powerUpType == ScalePowerUp.PowerUpType.Null || powerUpType == null) return;
         if (!BulletCounter.Instance.HasBullet(powerUpType)) return;
         mousePosition += deltaAnalog * Time.deltaTime;
+        Vector2 maxTrowForceWithScale = Player.Instance.scaleMult * maxThrowForce;
         mousePosition = new Vector3(
-            Mathf.Clamp(mousePosition.x, -maxThrowForce.x, maxThrowForce.x),
-            Mathf.Clamp(mousePosition.y, -maxThrowForce.y, maxThrowForce.y),
+            Mathf.Clamp(mousePosition.x, -maxTrowForceWithScale.x, maxTrowForceWithScale.x),
+            Mathf.Clamp(mousePosition.y, -maxTrowForceWithScale.y, maxTrowForceWithScale.y),
             mousePosition.z);
-        scalePowerUpThrower.PlotTrajectory(mousePosition, maxThrowForce);
+        scalePowerUpThrower.PlotTrajectory(mousePosition, maxTrowForceWithScale);
     }
     
     private void ThrowAction(ScalePowerUp.PowerUpType powerUpType)
@@ -107,6 +112,7 @@ public class PlayerInteraction : MonoBehaviour
 
     public void Propel(Vector2 direction, float force)
     {
+        force *= Player.Instance.scaleMult;
         rb.AddForce(direction * force, ForceMode2D.Impulse);
     }
 }

@@ -35,6 +35,7 @@ public class TrajectoryLine : MonoBehaviour
         float maxVal = Mathf.Max(Mathf.Abs(mousePos.x) / maxMag.x, Mathf.Abs(mousePos.y) / maxMag.y);
         lineMaterial.SetFloat("_lerp", maxVal);
         lineRenderer.SetPositions(points);
+        lineRenderer.textureScale = new Vector2(1f / Player.Instance.scaleMult, 1f);
     }
 
     public void ResetTrajectory()

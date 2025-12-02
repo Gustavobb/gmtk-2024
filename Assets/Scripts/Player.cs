@@ -17,24 +17,27 @@ public class Player : MonoBehaviour
     [Header("Jump Buffer")]
     [SerializeField] private float jumpBufferLength = 0.1f;
 
-
+    public float scaleMult = 1f;
     [Header("Coyote Time")]
     [SerializeField] private float coyoteTimeLength = 0.1f;
 
 
     [Header("References")]
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Collider2D collider;
 
     [SerializeField] private Animator _animator;
-
+    
     private PlayerInputActions input;
     private bool isGrounded;
     private float horizontalInput;
     private float velocityXSmoothing;
     private float jumpBufferCount;
     private float coyoteTimeCounter;
+    private Vector3 originalScale;
     
     public static Player Instance;
+    public Rigidbody2D Rb => rb;
     
     private void Awake()
     {
@@ -44,6 +47,8 @@ public class Player : MonoBehaviour
         if (_animator == null) _animator = GetComponent<Animator>();
 
         input = new PlayerInputActions();
+        originalScale = transform.localScale;
+        groundDistance = collider.bounds.extents.y;
     }
 
     private void OnEnable()
@@ -65,10 +70,12 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        transform.localScale = originalScale * scaleMult;
+        rb.gravityScale = scaleMult;
         jumpBufferCount -= Time.deltaTime;
         horizontalInput = input.Player.Move.ReadValue<float>();
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, groundDistance, groundMask);
-
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, (groundDistance + 0.01f) * scaleMult, groundMask);
+        Debug.DrawRay(transform.position, Vector2.down * (groundDistance + 0.01f) * scaleMult, Color.red);
         isGrounded = hit.collider != null;
         _animator.SetFloat("Yspeed", Mathf.Abs(rb.linearVelocity.y));
 
@@ -83,7 +90,7 @@ public class Player : MonoBehaviour
 
         if (jumpBufferCount >= 0 && coyoteTimeCounter > 0 && rb.linearVelocity.y <= 0)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce * scaleMult);
             SoundManager.instance.Play("Jump");
             jumpBufferCount = 0;
         }
@@ -92,12 +99,9 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        float targetVelocityX = horizontalInput * speed;
-
-        _animator.SetInteger("Speed", Mathf.Abs((int)targetVelocityX));
-
-        float smoothSpeed = Mathf.SmoothDamp(rb.linearVelocity.x, targetVelocityX, ref velocityXSmoothing, isGrounded ? accelerationGrounded : accelerationAirborne);
-
+        float targetVelocityX = horizontalInput * speed * scaleMult;
+        _animator.SetFloat("Speed", Mathf.Abs(targetVelocityX));
+        float smoothSpeed = Mathf.SmoothDamp(rb.linearVelocity.x, targetVelocityX, ref velocityXSmoothing, (isGrounded ? accelerationGrounded : accelerationAirborne));
         rb.linearVelocity = new Vector2(smoothSpeed, rb.linearVelocity.y);
 
         //rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);

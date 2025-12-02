@@ -58,7 +58,7 @@ public class Util
         while (elapsed < fadeDuration)
         {
             float t = elapsed / fadeDuration;
-            t = Easing.EaseOutCircular(t);
+            t = Easing.EaseInOutSinusoidal(t);
             float value = Mathf.Lerp(initialVal, finalVal, t);
             elapsed += Time.deltaTime;
             

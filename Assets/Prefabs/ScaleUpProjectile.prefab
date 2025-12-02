@@ -55,6 +55,7 @@ MonoBehaviour:
   boxCollider: {fileID: 0}
   rb: {fileID: 7201297222192604161}
   scalePowerUpManager: {fileID: 0}
+  OriginalScale: 1.3856
 --- !u!50 &7201297222192604161
 Rigidbody2D:
   serializedVersion: 5
@@ -106,7 +107,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -876546973899608171, guid: 96fdc88dddf474158b9bc597447b73e2, type: 3}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -188,7 +189,7 @@ TrailRenderer:
       m_NumAlphaKeys: 2
     numCornerVertices: 0
     numCapVertices: 0
-    alignment: 0
+    alignment: 1
     textureMode: 0
     textureScale: {x: 1, y: 1}
     shadowBias: 0.5
@@ -289,7 +290,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: ebdf6d271d2694ce791fce54d12cd242, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -409,7 +410,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: ebdf6d271d2694ce791fce54d12cd242, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -459,15 +460,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1086501553502922198, guid: 73a60b2ace39ca94c85a657488613e82, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.12495
+      value: 0.119079575
       objectReference: {fileID: 0}
     - target: {fileID: 1086501553502922198, guid: 73a60b2ace39ca94c85a657488613e82, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.12495
+      value: 0.119079575
       objectReference: {fileID: 0}
     - target: {fileID: 1086501553502922198, guid: 73a60b2ace39ca94c85a657488613e82, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.12495
+      value: 0.119079575
       objectReference: {fileID: 0}
     - target: {fileID: 1086501553502922198, guid: 73a60b2ace39ca94c85a657488613e82, type: 3}
       propertyPath: m_LocalPosition.x
@@ -513,21 +514,33 @@ PrefabInstance:
       propertyPath: looping
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1086501553502922199, guid: 73a60b2ace39ca94c85a657488613e82, type: 3}
+      propertyPath: scalingMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1086501554650470882, guid: 73a60b2ace39ca94c85a657488613e82, type: 3}
       propertyPath: looping
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1086501554650470882, guid: 73a60b2ace39ca94c85a657488613e82, type: 3}
+      propertyPath: scalingMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1086501554650470884, guid: 73a60b2ace39ca94c85a657488613e82, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.25754
+      value: 1.9999999
       objectReference: {fileID: 0}
     - target: {fileID: 1086501554650470884, guid: 73a60b2ace39ca94c85a657488613e82, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.25754
+      value: 1.9999999
       objectReference: {fileID: 0}
     - target: {fileID: 1086501554650470884, guid: 73a60b2ace39ca94c85a657488613e82, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.25754
+      value: 1.9999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 1086501554650470884, guid: 73a60b2ace39ca94c85a657488613e82, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1086501554650470885, guid: 73a60b2ace39ca94c85a657488613e82, type: 3}
       propertyPath: m_IsActive
