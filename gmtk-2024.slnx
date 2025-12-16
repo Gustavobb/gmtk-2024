@@ -1,6 +1,9 @@
 ﻿<Solution>
+  <Project Path="SingularityGroup.HotReload.Editor.csproj" />
   <Project Path="ScriptBoy.EButtonAttributes.csproj" />
-  <Project Path="ScriptBoy.EButtonTests.csproj" />
   <Project Path="Assembly-CSharp.csproj" />
+  <Project Path="ScriptBoy.EButtonTests.csproj" />
+  <Project Path="SingularityGroup.HotReload.Runtime.Public.csproj" />
+  <Project Path="SingularityGroup.HotReload.Runtime.csproj" />
   <Project Path="ScriptBoy.EButtonEditor.csproj" />
 </Solution>

@@ -1,8 +1,11 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
+
 
 public class LevelSelectManager : MonoBehaviour
-{
+{    
+    private PlayerInputActions input;
     [SerializeField] private LevelSelectButton[] levelButtons;
     private FM FM;
     private void Start()
@@ -23,11 +26,26 @@ public class LevelSelectManager : MonoBehaviour
 
     private void OnEnable()
     {
+        input = new PlayerInputActions();
         FM = FindFirstObjectByType<FM>();
+        input.Enable();
+        input.UI.Cancel.performed += Back;
+    }
+    private void OnDisable()
+    {
+        input.UI.Cancel.performed -= Back;
+        input.Disable();
     }
 
     public void BackButton()
     {
         SceneManager.LoadScene(0);
     }
+
+    public void Back(InputAction.CallbackContext ctx)
+    {
+        print("Going back to main menu");
+        SceneManager.LoadScene(0);
+    }
+    
 }
