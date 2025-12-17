@@ -30,7 +30,7 @@ public class ScalableObject : MonoBehaviour
     public Vector3 ScaleDirection;
     private Func<float, float> ease;
     private Queue<Action> scaleFunctions = new Queue<Action>();
-    public bool isScaling;
+    public bool isScaling, isBouncer;
     public UnityEvent onScaleDown, onScaleUp;
 
 #if UNITY_EDITOR
