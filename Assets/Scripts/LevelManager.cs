@@ -9,7 +9,7 @@ using UnityEngine.InputSystem;
 public class LevelManager : MonoBehaviour
 {
     [SerializeField] private GameObject plus, minus, reset;
-    [SerializeField] private GameObject pauseContainer;
+    [SerializeField] private GameObject pauseContainer, resumeButton;
     private FM FM;
 
     public static LevelManager Instance;
@@ -17,8 +17,8 @@ public class LevelManager : MonoBehaviour
     public Material fadeMaterial;
 
     private PlayerInputActions input;
-
-
+    private UnityEngine.EventSystems.EventSystem eventSystem;
+    
 
     private void Awake()
     {
@@ -33,6 +33,7 @@ public class LevelManager : MonoBehaviour
             minus.SetActive(true);
             plus.SetActive(true);
             reset.SetActive(true);
+            eventSystem = FindFirstObjectByType<UnityEngine.EventSystems.EventSystem>();
         }));
     }
     private void OnEnable()
@@ -40,9 +41,18 @@ public class LevelManager : MonoBehaviour
         FM = FindFirstObjectByType<FM>();
         input = new PlayerInputActions();
         input.Enable();
+        input.Player.CancelShot.performed += CheckPause;
         input.Player.Pause.performed += PauseGame;
         input.Player.Reset.performed += ResetLevel;
 
+    }
+
+    private void CheckPause(InputAction.CallbackContext ctx)
+    {
+        if (isPaused)
+        {
+            PauseGame(new InputAction.CallbackContext());
+        }
     }
 
     private void PauseGame(InputAction.CallbackContext ctx)
@@ -50,6 +60,7 @@ public class LevelManager : MonoBehaviour
         isPaused = !isPaused;
         pauseContainer.SetActive(isPaused);
         // Time.timeScale = isPaused ? 0f : 1f;
+        if (isPaused) eventSystem.SetSelectedGameObject(resumeButton);
     }
 
     public void ResetLevel(InputAction.CallbackContext ctx)
