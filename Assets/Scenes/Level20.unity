@@ -721,8 +721,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 181545816}
   mainCamera: {fileID: 1271015948}
+  triggerCollider: {fileID: 0}
   scaleFactor: 1.2
-  effectTime: 1
+  effectTime: 0.3
+  parentScaler: {fileID: 2096925062}
 --- !u!4 &228815141
 Transform:
   m_ObjectHideFlags: 0
@@ -4229,8 +4231,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 181545816}
   mainCamera: {fileID: 1271015948}
+  triggerCollider: {fileID: 0}
   scaleFactor: 1.2
-  effectTime: 1
+  effectTime: 0.3
+  parentScaler: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

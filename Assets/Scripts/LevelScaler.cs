@@ -6,38 +6,79 @@ public class LevelScaler : MonoBehaviour
 {
     [SerializeField] private Player player;
     [SerializeField] private Camera mainCamera;
+    [SerializeField] private Collider2D triggerCollider;
     [SerializeField] private float scaleFactor = 1.2f;
     [SerializeField] private float effectTime = 1f;
-    private const string PLAYER_TAG = "Player";
+    [SerializeField] private LevelScaler parentScaler;
     private IEnumerator coroutine;
+    private Vector3 startCameraPos;
+    private float startCameraSize, endCameraSize;
+    private float startPlayerScaleMult, endPlayerScaleMult;
+    private bool isInside = false, wasInside = false;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void Start()
     {
-        if (!collision.CompareTag(PLAYER_TAG)) return;
-
-        if (coroutine != null)
+        float parentScaleDepth = 1f;
+        
+        startCameraPos = mainCamera.transform.position;
+        if (parentScaler != null)
         {
+            startCameraPos = parentScaler.transform.position;
+            parentScaleDepth = parentScaler.RecursiveGetScaleDepth();
+        }
+
+        startCameraSize = mainCamera.orthographicSize * parentScaleDepth;
+        endCameraSize = startCameraSize * scaleFactor;
+        
+        startPlayerScaleMult = player.scaleMult * parentScaleDepth;
+        endPlayerScaleMult = startPlayerScaleMult * scaleFactor;
+        
+        if (triggerCollider == null)
+        {
+            triggerCollider = GetComponent<Collider2D>();
+        }
+    }
+
+    private float RecursiveGetScaleDepth()
+    {
+        return scaleFactor * (parentScaler != null ? parentScaler.RecursiveGetScaleDepth() : 1f);
+    }
+
+    private bool PlayerIsInsideCollider()
+    {
+        return triggerCollider.OverlapPoint(player.transform.position);
+    }
+
+    private void Update()
+    {
+        wasInside = isInside;
+        isInside = PlayerIsInsideCollider();
+        
+        if (isInside == wasInside) return;
+        
+        if (isInside && coroutine == null)
+        {
+            OnPlayerEnter2D();
             return;
         }
         
-        startCameraSize = mainCamera.orthographicSize;
-        startCameraPos = mainCamera.transform.position;
-        startPlayerScaleMult = player.scaleMult;
+        if (!isInside && coroutine == null)
+        {
+            OnPlayerExit2D();
+        }
+    }
+    
+    private void OnPlayerEnter2D()
+    {
         coroutine = ScaleEffect(true);
         StartCoroutine(coroutine);
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnPlayerExit2D()
     {
-        if (!collision.CompareTag(PLAYER_TAG)) return;
-        if (coroutine != null) return;
-        
         coroutine = ScaleEffect(false);
         StartCoroutine(coroutine);
     }
-    
-    private Vector3 startCameraPos;
-    private float startCameraSize, startPlayerScaleMult;
     
     private IEnumerator ScaleEffect(bool zoomIn)
     {
@@ -46,8 +87,8 @@ public class LevelScaler : MonoBehaviour
         Vector3 startPos = mainCamera.transform.position;
         startPos.z = -10f;
         
-        float targetSize = zoomIn ? startCameraSize * scaleFactor : startCameraSize;
-        float targetPlayerScaleMult = zoomIn ? startPlayerScaleMult * scaleFactor : startPlayerScaleMult;
+        float targetSize = zoomIn ? endCameraSize : startCameraSize;
+        float targetPlayerScaleMult = zoomIn ? endPlayerScaleMult : startPlayerScaleMult;
         Vector3 targetPos = zoomIn ? transform.position : startCameraPos;
         targetPos.z = -10f;
         
