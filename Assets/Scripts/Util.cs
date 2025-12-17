@@ -69,4 +69,14 @@ public class Util
         func(finalVal);
         o?.Invoke();
     }
+    
+    public static IEnumerator WaitUntilConditionCoroutine(Func<bool> cond, Func<bool> func)
+    {
+        while (!cond())
+        {
+            yield return null;
+        }
+
+        func();
+    }
 }
