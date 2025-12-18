@@ -73,7 +73,7 @@ public class Player : MonoBehaviour
         transform.localScale = originalScale * scaleMult;
         rb.gravityScale = scaleMult;
         jumpBufferCount -= Time.deltaTime;
-        horizontalInput = input.Player.Move.ReadValue<float>();
+        if (!LevelManager.Instance.isPaused) horizontalInput = input.Player.Move.ReadValue<float>();
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, (groundDistance + 0.01f) * scaleMult, groundMask);
         Debug.DrawRay(transform.position, Vector2.down * (groundDistance + 0.01f) * scaleMult, Color.red);
         isGrounded = hit.collider != null;
