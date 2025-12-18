@@ -65,7 +65,7 @@ public class Player : MonoBehaviour
 
     private void OnJumpPerformed(InputAction.CallbackContext ctx)
     {
-        jumpBufferCount = jumpBufferLength;
+        if (!LevelManager.Instance.isPaused) jumpBufferCount = jumpBufferLength;
     }
 
     private void Update()

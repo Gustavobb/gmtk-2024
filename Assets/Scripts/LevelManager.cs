@@ -13,7 +13,7 @@ public class LevelManager : MonoBehaviour
     private FM FM;
 
     public static LevelManager Instance;
-    private bool isPaused = false;
+    public bool isPaused = false;
     public Material fadeMaterial;
 
     private PlayerInputActions input;
