@@ -18,7 +18,7 @@ public class Button : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("PowerUp") || !stopWatchCanPress) return;
+        if (collision.gameObject.CompareTag("PowerUp") || collision.gameObject.CompareTag("Player") || !stopWatchCanPress) return;
         Press(scalable);
     }
 

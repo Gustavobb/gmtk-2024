@@ -46,6 +46,7 @@ public class LevelScaler : MonoBehaviour
 
     private bool PlayerIsInsideCollider()
     {
+        if(triggerCollider == null) return false;
         return triggerCollider.OverlapPoint(player.transform.position);
     }
 
