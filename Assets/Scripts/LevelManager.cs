@@ -18,7 +18,7 @@ public class LevelManager : MonoBehaviour
 
     private PlayerInputActions input;
     private UnityEngine.EventSystems.EventSystem eventSystem;
-    
+
 
     private void Awake()
     {
@@ -33,7 +33,6 @@ public class LevelManager : MonoBehaviour
             minus.SetActive(true);
             plus.SetActive(true);
             reset.SetActive(true);
-            eventSystem = FindFirstObjectByType<UnityEngine.EventSystems.EventSystem>();
         }));
     }
     private void OnEnable()
@@ -44,7 +43,14 @@ public class LevelManager : MonoBehaviour
         input.Player.CancelShot.performed += CheckPause;
         input.Player.Pause.performed += PauseGame;
         input.Player.Reset.performed += ResetLevel;
+    }
 
+    private void OnDisable()
+    {
+        input.Player.CancelShot.performed -= CheckPause;
+        input.Player.Pause.performed -= PauseGame;
+        input.Player.Reset.performed -= ResetLevel;
+        input.Disable();
     }
 
     private void CheckPause(InputAction.CallbackContext ctx)
@@ -60,6 +66,7 @@ public class LevelManager : MonoBehaviour
         isPaused = !isPaused;
         pauseContainer.SetActive(isPaused);
         // Time.timeScale = isPaused ? 0f : 1f;
+        eventSystem = FindFirstObjectByType<UnityEngine.EventSystems.EventSystem>();
         if (isPaused) eventSystem.SetSelectedGameObject(resumeButton);
     }
 
