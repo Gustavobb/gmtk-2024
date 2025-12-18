@@ -88,7 +88,7 @@ public class PlayerInteraction : MonoBehaviour
 
     private void UpdateThrowAction(ScalePowerUp.PowerUpType powerUpType)
     {
-        if (powerUpType == ScalePowerUp.PowerUpType.Null || powerUpType == null) return;
+        if (powerUpType == ScalePowerUp.PowerUpType.Null || powerUpType == null|| LevelManager.Instance.isPaused) return;
         if (!BulletCounter.Instance.HasBullet(powerUpType)) return;
         mousePosition += deltaAnalog * Time.deltaTime;
         Vector2 maxTrowForceWithScale = Player.Instance.scaleMult * maxThrowForce;
@@ -101,7 +101,7 @@ public class PlayerInteraction : MonoBehaviour
     
     private void ThrowAction(ScalePowerUp.PowerUpType powerUpType)
     {
-        if (currentPowerUpType == ScalePowerUp.PowerUpType.Null || currentPowerUpType == null) return;
+        if (currentPowerUpType == ScalePowerUp.PowerUpType.Null || currentPowerUpType == null || LevelManager.Instance.isPaused) return;
         scalePowerUpThrower.ResetTrajectory();
         if (!BulletCounter.Instance.HasBullet(powerUpType)) return;
         scalePowerUpThrower.ThrowPowerUp(powerUpType, mousePosition);

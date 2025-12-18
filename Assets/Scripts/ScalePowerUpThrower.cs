@@ -25,7 +25,7 @@ public class ScalePowerUpThrower : MonoBehaviour
     public void ThrowPowerUp(ScalePowerUp.PowerUpType powerUpType, Vector3 mousePos)
     {
         ScalePowerUp powerUp = ScalePowerUpManager.Instance.RequestScalePowerUp(powerUpType);
-        if (powerUp == null) return;
+        if (powerUp == null || LevelManager.Instance.isPaused) return;
 
         ResetTrajectory();
         Vector2 mouseClamped = new Vector2(Mathf.Clamp(Input.mousePosition.x, 0, Screen.width), Mathf.Clamp(Input.mousePosition.y, 0, Screen.height));
