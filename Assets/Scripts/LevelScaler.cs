@@ -14,7 +14,7 @@ public class LevelScaler : MonoBehaviour
     private Vector3 startCameraPos;
     private float startCameraSize, endCameraSize;
     private float startPlayerScaleMult, endPlayerScaleMult;
-    private bool isInside = false, wasInside = false;
+    private bool isInside = false;
 
     private void Start()
     {
@@ -52,19 +52,22 @@ public class LevelScaler : MonoBehaviour
 
     private void Update()
     {
-        wasInside = isInside;
         isInside = PlayerIsInsideCollider();
-        
-        if (isInside == wasInside) return;
         
         if (isInside && coroutine == null)
         {
+            if (Mathf.Abs(player.scaleMult - endPlayerScaleMult) < 0.01f)
+                return;
+            
             OnPlayerEnter2D();
             return;
         }
         
         if (!isInside && coroutine == null)
         {
+            if (Mathf.Abs(player.scaleMult - startPlayerScaleMult) < 0.01f)
+                return;
+            
             OnPlayerExit2D();
         }
     }
@@ -83,6 +86,7 @@ public class LevelScaler : MonoBehaviour
     
     private IEnumerator ScaleEffect(bool zoomIn)
     {
+        Debug.Log("Starting scale effect: " + (zoomIn ? "Zoom In" : "Zoom Out"));
         float startSize = mainCamera.orthographicSize;
         float startScaleMult = player.scaleMult;
         Vector3 startPos = mainCamera.transform.position;
