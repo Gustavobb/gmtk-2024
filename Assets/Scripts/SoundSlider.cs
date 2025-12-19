@@ -11,6 +11,7 @@ public class slider_music : MonoBehaviour
 
     void Start()
     {
+        source = isMusic ? GameObject.Find("Music") : GameObject.Find("SoundManager");  
         slider = GetComponent<Slider>();
         slider.value = PlayerPrefs.GetFloat(isMusic ? "musicVolume" : "SFXVolume", .5f);
 
