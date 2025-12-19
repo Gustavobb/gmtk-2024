@@ -131,6 +131,14 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 292398022}
+    - target: {fileID: 2932319740622091296, guid: 32633aff2ba85409f9317b6dc0b5e931, type: 3}
+      propertyPath: source
+      value: 
+      objectReference: {fileID: 1137343508}
+    - target: {fileID: 3304294331831296646, guid: 32633aff2ba85409f9317b6dc0b5e931, type: 3}
+      propertyPath: source
+      value: 
+      objectReference: {fileID: 1137343507}
     - target: {fileID: 5873682305409580461, guid: 32633aff2ba85409f9317b6dc0b5e931, type: 3}
       propertyPath: sounds.Array.data[8].volume
       value: 0.5
@@ -1666,6 +1674,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3a1ed91e1432064d8bb77fb741b22c4, type: 3}
+--- !u!1 &1137343507 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3538609765742583864, guid: d3a1ed91e1432064d8bb77fb741b22c4, type: 3}
+  m_PrefabInstance: {fileID: 1137343506}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1137343508 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3043998755829386099, guid: d3a1ed91e1432064d8bb77fb741b22c4, type: 3}
+  m_PrefabInstance: {fileID: 1137343506}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1234565066
 GameObject:
   m_ObjectHideFlags: 0

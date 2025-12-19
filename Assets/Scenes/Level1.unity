@@ -167,23 +167,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3538609765742583864, guid: d3a1ed91e1432064d8bb77fb741b22c4, type: 3}
   m_PrefabInstance: {fileID: 1901120135}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &245557637
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 245557634}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cfb86e9ecfcfbc40b671bca0cbb94a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  audioSourcesstatic: {fileID: 0}
-  audioSources: []
-  menu: {fileID: 0}
-  options: {fileID: 0}
-  isMusic: 0
 --- !u!1001 &256806933
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -625,6 +608,14 @@ PrefabInstance:
       propertyPath: source
       value: 
       objectReference: {fileID: 1529321898}
+    - target: {fileID: 2932319740622091296, guid: 32633aff2ba85409f9317b6dc0b5e931, type: 3}
+      propertyPath: source
+      value: 
+      objectReference: {fileID: 1529321898}
+    - target: {fileID: 3304294331831296646, guid: 32633aff2ba85409f9317b6dc0b5e931, type: 3}
+      propertyPath: source
+      value: 
+      objectReference: {fileID: 245557634}
     - target: {fileID: 4219497191953132499, guid: 32633aff2ba85409f9317b6dc0b5e931, type: 3}
       propertyPath: source
       value: 
@@ -1922,23 +1913,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3043998755829386099, guid: d3a1ed91e1432064d8bb77fb741b22c4, type: 3}
   m_PrefabInstance: {fileID: 1901120135}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1529321901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1529321898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cfb86e9ecfcfbc40b671bca0cbb94a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SFXControls
-  audioSourcesstatic: {fileID: 0}
-  audioSources: []
-  menu: {fileID: 0}
-  options: {fileID: 0}
-  isMusic: 1
 --- !u!1 &1620981939
 GameObject:
   m_ObjectHideFlags: 0
@@ -2621,13 +2595,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3538609765742583864, guid: d3a1ed91e1432064d8bb77fb741b22c4, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 245557637}
-    - targetCorrespondingSourceObject: {fileID: 3043998755829386099, guid: d3a1ed91e1432064d8bb77fb741b22c4, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1529321901}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3a1ed91e1432064d8bb77fb741b22c4, type: 3}
 --- !u!1 &2080584315
 GameObject:

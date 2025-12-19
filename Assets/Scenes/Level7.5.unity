@@ -131,6 +131,14 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 292398022}
+    - target: {fileID: 2932319740622091296, guid: 32633aff2ba85409f9317b6dc0b5e931, type: 3}
+      propertyPath: source
+      value: 
+      objectReference: {fileID: 756305497}
+    - target: {fileID: 3304294331831296646, guid: 32633aff2ba85409f9317b6dc0b5e931, type: 3}
+      propertyPath: source
+      value: 
+      objectReference: {fileID: 756305496}
     - target: {fileID: 6042665538538729641, guid: 32633aff2ba85409f9317b6dc0b5e931, type: 3}
       propertyPath: plusCount
       value: 4
@@ -1914,6 +1922,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3a1ed91e1432064d8bb77fb741b22c4, type: 3}
+--- !u!1 &756305496 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3538609765742583864, guid: d3a1ed91e1432064d8bb77fb741b22c4, type: 3}
+  m_PrefabInstance: {fileID: 756305495}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &756305497 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3043998755829386099, guid: d3a1ed91e1432064d8bb77fb741b22c4, type: 3}
+  m_PrefabInstance: {fileID: 756305495}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &756451552
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7271791228274476288}
   - component: {fileID: 7770965978034417913}
+  - component: {fileID: 6233788096958490295}
   m_Layer: 0
   m_Name: Music
   m_TagString: Untagged
@@ -43,6 +44,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -128,6 +130,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6233788096958490295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3043998755829386099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cfb86e9ecfcfbc40b671bca0cbb94a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SFXControls
+  audioSourcesstatic: {fileID: 0}
+  audioSources: []
+  menu: {fileID: 0}
+  options: {fileID: 0}
+  isMusic: 1
 --- !u!1 &3538609765742583864
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,6 +157,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3246163464800126031}
   - component: {fileID: 495983995445815124}
+  - component: {fileID: 4512867857934989288}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -242,3 +262,20 @@ MonoBehaviour:
     loop: 1
     source: {fileID: 0}
   randomizePitch: 1
+--- !u!114 &4512867857934989288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3538609765742583864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cfb86e9ecfcfbc40b671bca0cbb94a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  audioSourcesstatic: {fileID: 0}
+  audioSources: []
+  menu: {fileID: 0}
+  options: {fileID: 0}
+  isMusic: 0
