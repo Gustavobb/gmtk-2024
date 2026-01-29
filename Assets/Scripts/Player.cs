@@ -80,6 +80,11 @@ public class Player : MonoBehaviour
         isGrounded = hit.collider != null;
         _animator.SetFloat("Yspeed", Mathf.Abs(rb.linearVelocity.y));
 
+        if (hit.collider.attachedRigidbody)
+        {
+            hit.collider.attachedRigidbody.linearVelocity -= new Vector2(rb.linearVelocity.x, 0f) * 0.01f;
+        }
+
         if (isGrounded)
         {
             coyoteTimeCounter = coyoteTimeLength;
