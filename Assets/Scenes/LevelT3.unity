@@ -426,6 +426,7 @@ MonoBehaviour:
   arrowsScale: 0.05
   ScaleDirection: {x: 0, y: 0, z: 0}
   isScaling: 0
+  isBouncer: 0
   onScaleDown:
     m_PersistentCalls:
       m_Calls: []
@@ -681,7 +682,7 @@ PrefabInstance:
       objectReference: {fileID: 245557634}
     - target: {fileID: 6042665538538729641, guid: 32633aff2ba85409f9317b6dc0b5e931, type: 3}
       propertyPath: minusCount
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6319458188591872425, guid: 32633aff2ba85409f9317b6dc0b5e931, type: 3}
       propertyPath: m_Name
@@ -1153,7 +1154,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4876850436742322231, guid: 466f82ae68604443aa25627524d35ac2, type: 3}
       propertyPath: propelForce
-      value: 21
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7283484147039964172, guid: 466f82ae68604443aa25627524d35ac2, type: 3}
       propertyPath: m_Name

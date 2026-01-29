@@ -2485,7 +2485,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4876850436742322231, guid: 466f82ae68604443aa25627524d35ac2, type: 3}
       propertyPath: propelForce
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6136291478457094943, guid: 466f82ae68604443aa25627524d35ac2, type: 3}
       propertyPath: m_LocalScale.x
@@ -3290,6 +3290,7 @@ MonoBehaviour:
   scaleFactor: 0.1
   effectTime: 0.3
   parentScaler: {fileID: 0}
+  stopChecking: 0
 --- !u!4 &2048432980
 Transform:
   m_ObjectHideFlags: 0

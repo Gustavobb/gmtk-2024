@@ -208,7 +208,7 @@ public class ScalableObject : MonoBehaviour
 
         if (rb)
         {
-            rb.gravityScale /= initialScale.magnitude / endScale.magnitude;
+            //rb.gravityScale /= initialScale.magnitude / endScale.magnitude;
         }
         
         isScaling = false;
