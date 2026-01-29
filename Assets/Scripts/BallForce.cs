@@ -18,7 +18,7 @@ public class PushOnScalableTouch2D : MonoBehaviour
         if (collision.gameObject.CompareTag("PowerUpBouncer"))
         {
             // reflect the ball
-            rb.linearVelocity = 2f * (collision.contacts[0].normal + rb.linearVelocity).normalized;
+            rb.linearVelocity = 1.6f * (collision.contacts[0].normal + rb.linearVelocity).normalized;
             return;
         }
         
