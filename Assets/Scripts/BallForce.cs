@@ -14,9 +14,15 @@ public class PushOnScalableTouch2D : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if ((!collision.gameObject.CompareTag("Scalable"))||(collision.gameObject.GetComponent<ScalableObject>().isScaling==false)||((collision.gameObject.GetComponent<ScalableObject>().isBouncer)==false))
-            return;
+        // if ((!collision.gameObject.CompareTag("Scalable"))||(collision.gameObject.GetComponent<ScalableObject>().isScaling==false)||((collision.gameObject.GetComponent<ScalableObject>().isBouncer)==false))
+        ScalableObject scalable = collision.gameObject.GetComponent<ScalableObject>();
+        if (!scalable && !collision.gameObject.CompareTag("PowerUpBouncer")) return;
 
+        if (scalable && !scalable.isScaling)
+        {
+            return;
+        }
+        
         Vector2 direction = (Vector2)(transform.position - collision.transform.position);
         direction.Normalize();
 

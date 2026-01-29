@@ -94,8 +94,8 @@ MonoBehaviour:
   _liveImageWidth: 30
   plusRect: {fileID: 8726270293832846611}
   minusRect: {fileID: 2319930783742191766}
-  plusCount: 10
-  minusCount: 0
+  plusCount: 3
+  minusCount: 1
 --- !u!1 &6319458188591872425
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,6 +181,7 @@ MonoBehaviour:
   reset: {fileID: 5397696239482976484}
   pauseContainer: {fileID: 2467653812857634951}
   resumeButton: {fileID: 900504216384228291}
+  isPaused: 0
   fadeMaterial: {fileID: 2100000, guid: 70cf3a824ef6d46db834ee10b08de3cc, type: 2}
 --- !u!1 &7313083053013387231
 GameObject:
@@ -493,6 +494,14 @@ PrefabInstance:
     - target: {fileID: 5466529320073902212, guid: 96602f14a137c40ddb4491774f4cb110, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -325.35712
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805010697768132153, guid: 96602f14a137c40ddb4491774f4cb110, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1645912122733137789}
+    - target: {fileID: 5805010697768132153, guid: 96602f14a137c40ddb4491774f4cb110, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResetLevel
       objectReference: {fileID: 0}
     - target: {fileID: 6408182443700274958, guid: 96602f14a137c40ddb4491774f4cb110, type: 3}
       propertyPath: m_AnchorMax.y

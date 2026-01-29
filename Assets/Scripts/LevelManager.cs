@@ -8,7 +8,7 @@ using UnityEngine.InputSystem;
 
 public class LevelManager : MonoBehaviour
 {
-    [SerializeField] private GameObject plus, minus, reset;
+    [SerializeField] private GameObject plus, minus;
     [SerializeField] private GameObject pauseContainer, resumeButton;
     private FM FM;
 
@@ -32,7 +32,6 @@ public class LevelManager : MonoBehaviour
         {
             minus.SetActive(true);
             plus.SetActive(true);
-            reset.SetActive(true);
         }));
     }
     private void OnEnable()
@@ -81,6 +80,11 @@ public class LevelManager : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }));
+    }
+
+    public void ResetLevel()
+    {
+        ResetLevel(new InputAction.CallbackContext());
     }
 
     public void LoadNextLevel()

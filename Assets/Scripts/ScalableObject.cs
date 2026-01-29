@@ -189,7 +189,8 @@ public class ScalableObject : MonoBehaviour
         {
             transform.localScale = Vector3.Lerp(initialScale, endScale, ease(time / duration));
             if (rb != null && rb.gravityScale != 0)
-                rb.linearVelocity += new Vector2(translationAmount.x, translationAmount.y);
+                // rb.linearVelocity += new Vector2(translationAmount.x, translationAmount.y);
+                rb.linearVelocity += Vector2.zero;
             else
                 transform.localPosition = Vector3.Lerp(initialPosition, endPosition, ease(time / duration));
 
@@ -204,6 +205,12 @@ public class ScalableObject : MonoBehaviour
             rb.linearVelocity += new Vector2(translationAmount.x, translationAmount.y);
         else
             transform.localPosition = endPosition;
+
+        if (rb)
+        {
+            rb.gravityScale /= initialScale.magnitude / endScale.magnitude;
+        }
+        
         isScaling = false;
         NormalizeArrowsSize();
     }

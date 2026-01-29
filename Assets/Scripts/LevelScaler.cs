@@ -15,6 +15,7 @@ public class LevelScaler : MonoBehaviour
     private float startCameraSize, endCameraSize;
     private float startPlayerScaleMult, endPlayerScaleMult;
     private bool isInside = false;
+    public bool stopChecking = false;
 
     private void Start()
     {
@@ -47,12 +48,27 @@ public class LevelScaler : MonoBehaviour
     private bool PlayerIsInsideCollider()
     {
         if(triggerCollider == null) return false;
+        // return triggerCollider.IsTouching(player.Collider);
         return triggerCollider.OverlapPoint(player.transform.position);
     }
 
     private void Update()
     {
+        if (stopChecking || (player.currentLevelScaler != null && player.currentLevelScaler != this && player.currentLevelScaler != parentScaler))
+            return;
+        
         isInside = PlayerIsInsideCollider();
+
+        if (parentScaler && !parentScaler.isInside)
+        {
+            isInside = false;
+            return;
+        }
+
+        if (parentScaler)
+        {
+            parentScaler.stopChecking = isInside;
+        }
         
         if (isInside && coroutine == null)
         {
@@ -75,12 +91,14 @@ public class LevelScaler : MonoBehaviour
     private void OnPlayerEnter2D()
     {
         coroutine = ScaleEffect(true);
+        player.currentLevelScaler = this;
         StartCoroutine(coroutine);
     }
 
     private void OnPlayerExit2D()
     {
         coroutine = ScaleEffect(false);
+        player.currentLevelScaler = null;
         StartCoroutine(coroutine);
     }
     

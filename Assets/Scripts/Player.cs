@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Collider2D collider;
 
     [SerializeField] private Animator _animator;
-    
+    public Collider2D Collider => collider;
     private PlayerInputActions input;
     private bool isGrounded;
     private float horizontalInput;
@@ -35,6 +35,7 @@ public class Player : MonoBehaviour
     private float jumpBufferCount;
     private float coyoteTimeCounter;
     private Vector3 originalScale;
+    public LevelScaler currentLevelScaler;
     
     public static Player Instance;
     public Rigidbody2D Rb => rb;
@@ -48,7 +49,7 @@ public class Player : MonoBehaviour
 
         input = new PlayerInputActions();
         originalScale = transform.localScale;
-        groundDistance = collider.bounds.extents.y;
+        groundDistance = collider.bounds.extents.y + 0.05f;
     }
 
     private void OnEnable()
