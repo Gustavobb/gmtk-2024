@@ -3023,7 +3023,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4236018301452018271, guid: 903944122a1a349d4905ea9f61d0da77, type: 3}
       propertyPath: minusGain
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4236018301452018271, guid: 903944122a1a349d4905ea9f61d0da77, type: 3}
       propertyPath: bulletCounter
@@ -3372,8 +3372,8 @@ Transform:
   m_GameObject: {fileID: 1747236649}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.4687, y: -3.4923, z: 5.7163e-10}
-  m_LocalScale: {x: 1.7663431, y: 1.1673073, z: 0.45199}
+  m_LocalPosition: {x: 5.4687, y: -3.2558, z: 5.7163e-10}
+  m_LocalScale: {x: 1.7663431, y: 1.6403002, z: 0.45199}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 429718635}

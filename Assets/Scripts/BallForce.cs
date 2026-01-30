@@ -6,10 +6,17 @@ public class PushOnScalableTouch2D : MonoBehaviour
     [SerializeField] private float pushForce = 1f;
 
     private Rigidbody2D rb;
+    private Vector2 previousVelocity;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+    }
+
+    void Update()
+    {
+        previousVelocity = rb.linearVelocity;
+
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -17,8 +24,9 @@ public class PushOnScalableTouch2D : MonoBehaviour
         // if ((!collision.gameObject.CompareTag("Scalable"))||(collision.gameObject.GetComponent<ScalableObject>().isScaling==false)||((collision.gameObject.GetComponent<ScalableObject>().isBouncer)==false))
         if (collision.gameObject.CompareTag("PowerUpBouncer"))
         {
+            print(previousVelocity);
             // reflect the ball
-            rb.velocity = 1.5f * (collision.contacts[0].normal + rb.velocity).normalized;
+            rb.linearVelocity = pushForce * Vector2.Reflect(previousVelocity.normalized, collision.collider.transform.up);
             return;
         }
         

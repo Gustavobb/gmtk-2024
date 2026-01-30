@@ -75,16 +75,25 @@ public class Player : MonoBehaviour
         rb.gravityScale = scaleMult;
         jumpBufferCount -= Time.deltaTime;
         if (!LevelManager.Instance.isPaused) horizontalInput = input.Player.Move.ReadValue<float>();
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, (groundDistance + 0.01f) * scaleMult, groundMask);
-        Debug.DrawRay(transform.position, Vector2.down * (groundDistance + 0.01f) * scaleMult, Color.red);
+        float colliderxSize = collider.bounds.size.x/3;
+        RaycastHit2D hit = new RaycastHit2D();
+        for (int i = -1; i <=1; i++)
+        {
+            RaycastHit2D wallHit = Physics2D.Raycast(transform.position + new Vector3(i*colliderxSize,0,0), Vector2.down, (groundDistance + 0.01f) * scaleMult, groundMask);
+            Debug.DrawRay(transform.position + new Vector3(i*colliderxSize,0,0), Vector2.down * (groundDistance + 0.01f) * scaleMult, Color.red);
+            if (wallHit.collider != null)
+            {
+                hit = wallHit;
+            }
+        }
         isGrounded = hit.collider != null;
         _animator.SetFloat("Yspeed", Mathf.Abs(rb.linearVelocity.y));
-
-        if (hit.collider.attachedRigidbody)
-        {
-            hit.collider.attachedRigidbody.linearVelocity -= new Vector2(rb.linearVelocity.x, 0f) * 0.01f;
+        if(hit.collider != null && hit.collider.attachedRigidbody != null){
+            if (hit.collider.attachedRigidbody)
+            {
+                hit.collider.attachedRigidbody.linearVelocity -= new Vector2(rb.linearVelocity.x, 0f) * 0.01f;
+            }
         }
-
         if (isGrounded)
         {
             coyoteTimeCounter = coyoteTimeLength;
