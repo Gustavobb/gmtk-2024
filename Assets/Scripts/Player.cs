@@ -75,7 +75,7 @@ public class Player : MonoBehaviour
         rb.gravityScale = scaleMult;
         jumpBufferCount -= Time.deltaTime;
         if (!LevelManager.Instance.isPaused) horizontalInput = input.Player.Move.ReadValue<float>();
-        float colliderxSize = collider.bounds.size.x/3;
+        float colliderxSize = collider.bounds.size.x/2 - 0.05f;
         RaycastHit2D hit = new RaycastHit2D();
         for (int i = -1; i <=1; i++)
         {
@@ -103,7 +103,7 @@ public class Player : MonoBehaviour
             coyoteTimeCounter -= Time.deltaTime;
         }
 
-        if (jumpBufferCount >= 0 && coyoteTimeCounter > 0 && rb.linearVelocity.y <= 0)
+        if (jumpBufferCount >= 0 && coyoteTimeCounter > 0 && rb.linearVelocity.y <= 0.2f)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce * scaleMult);
             SoundManager.instance.Play("Jump");
