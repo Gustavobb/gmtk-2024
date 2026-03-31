@@ -178,7 +178,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plus: {fileID: 8408338100001469926}
   minus: {fileID: 5178639400320876429}
-  reset: {fileID: 5397696239482976484}
   pauseContainer: {fileID: 2467653812857634951}
   resumeButton: {fileID: 900504216384228291}
   isPaused: 0
@@ -321,6 +320,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3047178194733528290, guid: 96602f14a137c40ddb4491774f4cb110, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3381070546386429551, guid: 96602f14a137c40ddb4491774f4cb110, type: 3}
+      propertyPath: m_MatchWidthOrHeight
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4701109976274717914, guid: 96602f14a137c40ddb4491774f4cb110, type: 3}
@@ -612,11 +615,6 @@ Animator:
 --- !u!1 &5178639400320876429 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2517300549890474481, guid: 96602f14a137c40ddb4491774f4cb110, type: 3}
-  m_PrefabInstance: {fileID: 7291616537145359996}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &5397696239482976484 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3447926327883171480, guid: 96602f14a137c40ddb4491774f4cb110, type: 3}
   m_PrefabInstance: {fileID: 7291616537145359996}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &6356984756351511504 stripped

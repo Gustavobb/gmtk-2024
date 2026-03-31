@@ -1984,6 +1984,7 @@ MonoBehaviour:
   scaleFactor: 1.2
   effectTime: 1
   parentScaler: {fileID: 0}
+  stopChecking: 0
 --- !u!1001 &803473574
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2492,6 +2493,14 @@ PrefabInstance:
     - target: {fileID: 4018423857894863223, guid: 466f82ae68604443aa25627524d35ac2, type: 3}
       propertyPath: scaleBehaviourY
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4085463328121010600, guid: 466f82ae68604443aa25627524d35ac2, type: 3}
+      propertyPath: m_Size.y
+      value: 2.403203
+      objectReference: {fileID: 0}
+    - target: {fileID: 4085463328121010600, guid: 466f82ae68604443aa25627524d35ac2, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.000000059604645
       objectReference: {fileID: 0}
     - target: {fileID: 4085463328121010600, guid: 466f82ae68604443aa25627524d35ac2, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.y
