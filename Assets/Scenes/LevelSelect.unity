@@ -4580,8 +4580,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GridLayoutGroup
   m_Padding:
-    m_Left: 30
-    m_Right: 30
+    m_Left: 300
+    m_Right: 300
     m_Top: 100
     m_Bottom: 75
   m_ChildAlignment: 4
