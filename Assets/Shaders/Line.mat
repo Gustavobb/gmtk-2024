@@ -57,7 +57,7 @@ Material:
     - _FadeTime: 4
     - _Scale: 1
     - _TimeFade: 4
-    - _lerp: 1
+    - _lerp: 0.22178401
     m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1
