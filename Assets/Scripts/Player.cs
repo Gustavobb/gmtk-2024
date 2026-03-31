@@ -75,7 +75,7 @@ public class Player : MonoBehaviour
         rb.gravityScale = scaleMult;
         jumpBufferCount -= Time.deltaTime;
         if (!LevelManager.Instance.isPaused) horizontalInput = input.Player.Move.ReadValue<float>();
-        float colliderxSize = collider.bounds.size.x/2 - 0.05f;
+        float colliderxSize = collider.bounds.size.x/2 - 0.05f * transform.localScale.x;
         RaycastHit2D hit = new RaycastHit2D();
         for (int i = -1; i <=1; i++)
         {
